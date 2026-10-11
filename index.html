@@ -16,24 +16,28 @@
 </head>
 <body>
 
-  <!-- 4-5s Cinematic Luxury Intro Animation Overlay -->
+  <!-- 2-Step Cinematic Intro Animation Overlay (NYATI -> BUILDERS & DEVELOPERS -> Slide Up) -->
   <div class="intro-curtain" id="introCurtain">
     <button class="intro-skip-btn" onclick="skipIntro()">Skip</button>
     <div class="intro-bg-glow"></div>
-    <div class="intro-content">
-      <div class="intro-emblem">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <polygon points="12 2 2 7 12 12 22 7 12 2" />
-          <polyline points="2 17 12 22 22 17" />
-          <polyline points="2 12 12 17 22 12" />
-        </svg>
+    <div class="intro-container">
+      <!-- Step 1: NYATI (shows for 2 sec) -->
+      <div class="intro-text-step" id="introStep1">
+        <div class="intro-emblem-mini">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2" />
+            <polyline points="2 17 12 22 22 17" />
+            <polyline points="2 12 12 17 22 12" />
+          </svg>
+        </div>
+        <h1 class="intro-huge-title">NYATI</h1>
       </div>
-      <h1 class="intro-brand-title">NYATI</h1>
-      <p class="intro-brand-tagline">Creating Landmarks Since 1997</p>
-      <div class="intro-progress-bar">
-        <div class="intro-progress-fill"></div>
+
+      <!-- Step 2: BUILDER AND DEVELOPER (shows for 2 sec) -->
+      <div class="intro-text-step" id="introStep2">
+        <h2 class="intro-subtitle-title">BUILDER AND DEVELOPER</h2>
+        <span class="intro-sub-line">PUNE &bull; EST. 1997</span>
       </div>
-      <span class="intro-progress-counter" id="introCounter">LOADING EXPERIENCE &bull; 0%</span>
     </div>
   </div>
 

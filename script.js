@@ -120,51 +120,59 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ==========================================================================
-// 4-5 SECOND CINEMATIC INTRO ANIMATION CONTROLLER
+// CINEMATIC 2-STEP INTRO ANIMATION (NYATI -> BUILDER AND DEVELOPER -> SLIDE UP)
 // ==========================================================================
+let introStep1Timer = null;
+let introSlideUpTimer = null;
+
 function initIntroAnimation() {
   const curtain = document.getElementById('introCurtain');
-  const counter = document.getElementById('introCounter');
-  if (!curtain) return;
+  const step1 = document.getElementById('introStep1');
+  const step2 = document.getElementById('introStep2');
+  if (!curtain || !step1 || !step2) return;
 
   document.body.style.overflow = 'hidden';
 
-  let progress = 0;
-  const totalDuration = 4200; // 4.2 seconds
-  const intervalTime = 42; // updates 100 times
-  const increment = 1;
+  // 1. Immediately show Step 1: NYATI (shows for 2 sec)
+  setTimeout(() => {
+    step1.classList.add('active');
+  }, 80);
 
-  introCounterInterval = setInterval(() => {
-    progress += increment;
-    if (progress > 100) progress = 100;
-    if (counter) {
-      counter.textContent = `LOADING EXPERIENCE • ${progress}%`;
-    }
+  // 2. At 2000ms (2 seconds): NYATI text exits
+  introStep1Timer = setTimeout(() => {
+    step1.classList.remove('active');
+    step1.classList.add('exit');
 
-    if (progress >= 100) {
-      clearInterval(introCounterInterval);
-    }
-  }, intervalTime);
+    // 3. Immediately show Step 2: BUILDER AND DEVELOPER (shows for 2 sec)
+    setTimeout(() => {
+      step2.classList.add('active');
+    }, 200);
+  }, 2000);
 
-  // Automatically dismiss curtain at 4.4 seconds
-  introTimer = setTimeout(() => {
+  // 4. At 4200ms (after 2 seconds of BUILDER AND DEVELOPER): page slides UPwards
+  introSlideUpTimer = setTimeout(() => {
     dismissIntroCurtain();
-  }, 4400);
+  }, 4200);
 }
 
 function skipIntro() {
-  if (introTimer) clearTimeout(introTimer);
-  if (introCounterInterval) clearInterval(introCounterInterval);
+  if (introStep1Timer) clearTimeout(introStep1Timer);
+  if (introSlideUpTimer) clearTimeout(introSlideUpTimer);
   dismissIntroCurtain();
 }
 
 function dismissIntroCurtain() {
   const curtain = document.getElementById('introCurtain');
   if (curtain) {
-    curtain.classList.add('hidden');
+    // Curtain slides UPWARDS
+    curtain.classList.add('slide-up');
     document.body.style.overflow = '';
-    // trigger auto slide timer
     startHeroSliderTimer();
+
+    // After 1 second slide-up transition finishes, hide completely
+    setTimeout(() => {
+      curtain.classList.add('hidden');
+    }, 1000);
   }
 }
 
