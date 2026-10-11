@@ -57,6 +57,8 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
 }
 
 body {
@@ -65,6 +67,16 @@ body {
   background-color: var(--nyati-cream);
   line-height: 1.6;
   overflow-x: hidden;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+/* Hide scrollbar completely across all browsers */
+::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
 }
 
 img {
@@ -582,46 +594,39 @@ input, select, textarea {
   align-items: center;
   justify-content: center;
   opacity: 0;
-  transform: translateY(20px) scale(0.96);
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(20px);
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
 }
 
 .intro-text-step.active {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
   pointer-events: auto;
 }
 
 .intro-text-step.exit {
   opacity: 0;
-  transform: translateY(-30px) scale(1.04);
-  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(-20px);
+  transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1), transform 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Step 1: NYATI */
-.intro-huge-title {
-  font-family: var(--font-serif);
-  font-size: clamp(3.8rem, 8.5vw, 6.8rem);
-  font-weight: 700;
-  letter-spacing: 0.28em;
-  color: #ffffff;
-  background: linear-gradient(135deg, #ffffff 40%, var(--nyati-gold-light) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  line-height: 1.1;
-  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
-}
-
-/* Step 2: BUILDER AND DEVELOPER */
+/* Step 1 & Step 2: SAME FONT, SAME COLOR, SAME SIZE */
+.intro-huge-title,
 .intro-subtitle-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
-  font-weight: 600;
-  letter-spacing: 0.2em;
-  color: var(--nyati-gold-light);
-  line-height: 1.2;
-  text-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
+  font-size: clamp(2.8rem, 6.5vw, 5.2rem);
+  font-weight: 700;
+  letter-spacing: 0.24em;
+  text-align: center;
+  line-height: 1.15;
+  color: #ffffff;
+  background: linear-gradient(135deg, #ffffff 35%, var(--nyati-gold-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  margin: 0;
+  padding: 0;
 }
 
 /* ==========================================================================
