@@ -104,14 +104,133 @@ const projectDatabase = {
 };
 
 let currentModalProjectKey = 'emerald';
+let heroCurrentIndex = 0;
+let heroSliderTimer = null;
+let introTimer = null;
+let introCounterInterval = null;
 
 document.addEventListener('DOMContentLoaded', () => {
+  initIntroAnimation();
+  initHeroSlider();
   initStickyHeader();
   initMegaMenu();
   initProjectsFilter();
   initMilestoneCounters();
   initNavScroll();
 });
+
+// ==========================================================================
+// 4-5 SECOND CINEMATIC INTRO ANIMATION CONTROLLER
+// ==========================================================================
+function initIntroAnimation() {
+  const curtain = document.getElementById('introCurtain');
+  const counter = document.getElementById('introCounter');
+  if (!curtain) return;
+
+  document.body.style.overflow = 'hidden';
+
+  let progress = 0;
+  const totalDuration = 4200; // 4.2 seconds
+  const intervalTime = 42; // updates 100 times
+  const increment = 1;
+
+  introCounterInterval = setInterval(() => {
+    progress += increment;
+    if (progress > 100) progress = 100;
+    if (counter) {
+      counter.textContent = `LOADING EXPERIENCE • ${progress}%`;
+    }
+
+    if (progress >= 100) {
+      clearInterval(introCounterInterval);
+    }
+  }, intervalTime);
+
+  // Automatically dismiss curtain at 4.4 seconds
+  introTimer = setTimeout(() => {
+    dismissIntroCurtain();
+  }, 4400);
+}
+
+function skipIntro() {
+  if (introTimer) clearTimeout(introTimer);
+  if (introCounterInterval) clearInterval(introCounterInterval);
+  dismissIntroCurtain();
+}
+
+function dismissIntroCurtain() {
+  const curtain = document.getElementById('introCurtain');
+  if (curtain) {
+    curtain.classList.add('hidden');
+    document.body.style.overflow = '';
+    // trigger auto slide timer
+    startHeroSliderTimer();
+  }
+}
+
+// ==========================================================================
+// HERO BANNER SHOWCASE SLIDER
+// ==========================================================================
+function initHeroSlider() {
+  updateHeroSlide(0);
+}
+
+function updateHeroSlide(index) {
+  const slides = document.querySelectorAll('.hero-slide');
+  const captionTag = document.getElementById('heroCaptionTag');
+  const captionTitle = document.getElementById('heroCaptionTitle');
+  const counter = document.getElementById('heroSlideCounter');
+
+  if (!slides || slides.length === 0) return;
+
+  if (index >= slides.length) index = 0;
+  if (index < 0) index = slides.length - 1;
+
+  heroCurrentIndex = index;
+
+  slides.forEach((slide, i) => {
+    if (i === heroCurrentIndex) {
+      slide.classList.add('active');
+    } else {
+      slide.classList.remove('active');
+    }
+  });
+
+  const activeSlide = slides[heroCurrentIndex];
+  if (activeSlide) {
+    const tag = activeSlide.getAttribute('data-tag');
+    const title = activeSlide.getAttribute('data-title');
+    if (captionTag && tag) captionTag.textContent = tag;
+    if (captionTitle && title) captionTitle.textContent = title;
+    if (counter) {
+      const currentNum = String(heroCurrentIndex + 1).padStart(2, '0');
+      const totalNum = String(slides.length).padStart(2, '0');
+      counter.textContent = `${currentNum} / ${totalNum}`;
+    }
+  }
+}
+
+function nextHeroSlide() {
+  updateHeroSlide(heroCurrentIndex + 1);
+  restartHeroSliderTimer();
+}
+
+function prevHeroSlide() {
+  updateHeroSlide(heroCurrentIndex - 1);
+  restartHeroSliderTimer();
+}
+
+function startHeroSliderTimer() {
+  if (heroSliderTimer) clearInterval(heroSliderTimer);
+  heroSliderTimer = setInterval(() => {
+    nextHeroSlide();
+  }, 5000); // 5s auto slide
+}
+
+function restartHeroSliderTimer() {
+  if (heroSliderTimer) clearInterval(heroSliderTimer);
+  startHeroSliderTimer();
+}
 
 // Sticky Header State Controller
 function initStickyHeader() {
