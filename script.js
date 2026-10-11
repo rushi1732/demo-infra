@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ==========================================================================
-// CINEMATIC 2-STEP INTRO ANIMATION (NYATI -> BUILDER AND DEVELOPER -> SLIDE UP)
+// CINEMATIC 2-STEP INTRO ANIMATION (NYATI 3s -> BUILDER AND DEVELOPER 3s -> SLIDE UP)
 // ==========================================================================
 let introStep1Timer = null;
 let introSlideUpTimer = null;
@@ -133,26 +133,26 @@ function initIntroAnimation() {
 
   document.body.style.overflow = 'hidden';
 
-  // 1. Immediately show Step 1: NYATI (shows for 2 sec)
+  // 1. Immediately show Step 1: NYATI (shows for 3 sec)
   setTimeout(() => {
     step1.classList.add('active');
-  }, 80);
+  }, 100);
 
-  // 2. At 2000ms (2 seconds): NYATI text exits
+  // 2. At 3000ms (3 seconds): NYATI text exits
   introStep1Timer = setTimeout(() => {
     step1.classList.remove('active');
     step1.classList.add('exit');
 
-    // 3. Immediately show Step 2: BUILDER AND DEVELOPER (shows for 2 sec)
+    // 3. Immediately show Step 2: BUILDER AND DEVELOPER (shows for 3 sec)
     setTimeout(() => {
       step2.classList.add('active');
     }, 200);
-  }, 2000);
+  }, 3000);
 
-  // 4. At 4200ms (after 2 seconds of BUILDER AND DEVELOPER): page slides UPwards
+  // 4. At 6200ms (after 3 seconds of BUILDER AND DEVELOPER): page slides UPwards
   introSlideUpTimer = setTimeout(() => {
     dismissIntroCurtain();
-  }, 4200);
+  }, 6200);
 }
 
 function skipIntro() {

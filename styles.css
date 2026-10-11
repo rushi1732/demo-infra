@@ -561,26 +561,17 @@ input, select, textarea {
   display: none !important;
 }
 
-.intro-bg-glow {
-  position: absolute;
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(197, 168, 128, 0.16) 0%, transparent 65%);
-  border-radius: 50%;
-  filter: blur(50px);
-  pointer-events: none;
-}
-
 .intro-container {
   position: relative;
   z-index: 2;
   text-align: center;
   width: 100%;
   max-width: 900px;
-  min-height: 260px;
+  min-height: 240px;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 1.5rem;
 }
 
 .intro-text-step {
@@ -619,69 +610,18 @@ input, select, textarea {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   line-height: 1.1;
-  margin-top: 0.5rem;
   text-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
-}
-
-.intro-emblem-mini {
-  width: 58px;
-  height: 58px;
-  background: linear-gradient(135deg, var(--nyati-gold-light) 0%, var(--nyati-bronze) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 6px;
-  box-shadow: 0 0 35px rgba(197, 168, 128, 0.45);
-  margin-bottom: 0.8rem;
-}
-
-.intro-emblem-mini svg {
-  width: 34px;
-  height: 34px;
-  color: #080b10;
 }
 
 /* Step 2: BUILDER AND DEVELOPER */
 .intro-subtitle-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 5.2vw, 4rem);
+  font-size: clamp(2.4rem, 5.5vw, 4.4rem);
   font-weight: 600;
-  letter-spacing: 0.22em;
+  letter-spacing: 0.2em;
   color: var(--nyati-gold-light);
   line-height: 1.2;
   text-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
-}
-
-.intro-sub-line {
-  font-family: var(--font-sans);
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 0.35em;
-  color: #9ca3af;
-  margin-top: 1.2rem;
-  display: inline-block;
-  border-top: 1px solid rgba(197, 168, 128, 0.35);
-  padding-top: 0.8rem;
-}
-
-.intro-skip-btn {
-  position: absolute;
-  top: 2rem;
-  right: 2.5rem;
-  color: #6b7280;
-  font-size: 0.75rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  padding: 0.5rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
-  transition: all var(--transition-fast);
-  z-index: 10;
-}
-
-.intro-skip-btn:hover {
-  color: var(--nyati-gold);
-  border-color: var(--nyati-gold);
 }
 
 /* ==========================================================================
