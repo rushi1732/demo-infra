@@ -59,51 +59,8 @@
         </div>
       </a>
 
-      <!-- Primary Nav -->
-      <nav class="desktop-nav" aria-label="Main Navigation">
-        <ul class="nav-links">
-          <li class="nav-link-item">
-            <a href="#about" class="nav-link">
-              About Us
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="#about">Legacy &amp; Philosophy</a></li>
-              <li class="dropdown-item"><a href="#verticals">Real Estate Leadership</a></li>
-              <li class="dropdown-item"><a href="#verticals">Nyati EPC Division</a></li>
-              <li class="dropdown-item"><a href="#corinthians">Hospitality &amp; Corinthians</a></li>
-              <li class="dropdown-item"><a href="#verticals">NL Healthcare</a></li>
-              <li class="dropdown-item"><a href="#verticals">Swastik Wellbeing</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-link-item">
-            <a href="#projects" class="nav-link">
-              Projects
-              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
-            </a>
-            <ul class="dropdown-menu">
-              <li class="dropdown-item"><a href="#projects" data-filter-link="residential">Residential Enclaves</a></li>
-              <li class="dropdown-item"><a href="#projects" data-filter-link="commercial">Commercial &amp; IT Parks</a></li>
-              <li class="dropdown-item"><a href="#projects" data-filter-link="luxury">The Luxury Collection</a></li>
-              <li class="dropdown-item"><a href="#projects" data-filter-link="epc">EPC &amp; Infrastructure</a></li>
-            </ul>
-          </li>
-
-          <li class="nav-link-item"><a href="#corinthians" class="nav-link">Hospitality</a></li>
-          <li class="nav-link-item"><a href="#values" class="nav-link">Core Values</a></li>
-          <li class="nav-link-item"><a href="#awards" class="nav-link">Accolades</a></li>
-          <li class="nav-link-item"><a href="#inquiry" class="nav-link">Contact</a></li>
-        </ul>
-      </nav>
-
-      <!-- Action Elements -->
+      <!-- Header Actions (Clean Hamburger Toggle) -->
       <div class="header-actions">
-        <button class="btn-luxury-outline" id="btnBookVisitHeader" onclick="openScheduleModal()">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
-          Book Site Visit
-        </button>
-
         <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle Fullscreen Menu">
           <span></span>
           <span></span>
@@ -118,49 +75,43 @@
     <div class="mega-menu-left">
       <div>
         <p style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.2em; color:var(--nyati-gold); margin-bottom:2rem;">
-          Nyati Group Portfolio Navigation
+          Nyati Group Navigation
         </p>
         <ul class="mega-menu-links">
-          <li class="mega-menu-item active" data-preview="assets/images/hero.jpg" data-caption-title="Nyati Real Estate" data-caption-desc="Crafting landmark residential towers and master-planned townships in Pune's finest growth corridors.">
-            <a href="#projects" onclick="closeMegaMenu()">
+          <li class="mega-menu-item active" data-preview="assets/images/hero.jpg" data-caption-title="About Nyati Group" data-caption-desc="A legacy built on concrete trust, architectural distinction, and innovation since 1997.">
+            <a href="#about" onclick="closeMegaMenu()">
               <span class="menu-num">01</span>
-              <span>Residential &amp; Commercial</span>
+              <span>About Us</span>
             </a>
           </li>
-          <li class="mega-menu-item" data-preview="assets/images/emerald.jpg" data-caption-title="The Luxury Collection" data-caption-desc="Bespoke residences designed with world-class architecture, private sun decks, and elevated luxury.">
+          <li class="mega-menu-item" data-preview="assets/images/emerald.jpg" data-caption-title="Landmark Projects" data-caption-desc="Premier residential enclaves, Grade-A commercial parks, and luxury towers across Pune.">
             <a href="#projects" onclick="closeMegaMenu()">
               <span class="menu-num">02</span>
-              <span>Luxury Living</span>
+              <span>Projects</span>
             </a>
           </li>
-          <li class="mega-menu-item" data-preview="assets/images/unitree.jpg" data-caption-title="Nyati EPC Engineering" data-caption-desc="Mega infrastructure, airports, university campuses, and cutting-edge industrial developments across India.">
-            <a href="#verticals" onclick="closeMegaMenu()">
-              <span class="menu-num">03</span>
-              <span>Engineering &amp; EPC</span>
-            </a>
-          </li>
-          <li class="mega-menu-item" data-preview="assets/images/corinthians.jpg" data-caption-title="The Corinthians Resort &amp; Club" data-caption-desc="Pune's legendary 25-acre Egyptian-themed luxury retreat with fine dining, brew houses, and grand banquets.">
+          <li class="mega-menu-item" data-preview="assets/images/corinthians.jpg" data-caption-title="The Corinthians Resort &amp; Club" data-caption-desc="Pune's legendary 25-acre Egyptian-themed luxury oasis, craft brewery, and banquet haven.">
             <a href="#corinthians" onclick="closeMegaMenu()">
+              <span class="menu-num">03</span>
+              <span>Hospitality</span>
+            </a>
+          </li>
+          <li class="mega-menu-item" data-preview="assets/images/luxury-interior.jpg" data-caption-title="Core Values &amp; Philosophy" data-caption-desc="High quality construction, in sync with nature, professional service, and absolute transparency.">
+            <a href="#values" onclick="closeMegaMenu()">
               <span class="menu-num">04</span>
-              <span>Hospitality &amp; Resorts</span>
+              <span>Core Values</span>
             </a>
           </li>
-          <li class="mega-menu-item" data-preview="assets/images/luxury-interior.jpg" data-caption-title="NL Healthcare &amp; Swastik" data-caption-desc="Holistic wellbeing sanctuaries and advanced healthcare solutions enriching thousands of lives daily.">
-            <a href="#verticals" onclick="closeMegaMenu()">
+          <li class="mega-menu-item" data-preview="assets/images/unitree.jpg" data-caption-title="Awards &amp; Accolades" data-caption-desc="Recognized by Hurun India Stars of Deccan, Times Realty Icons, and CREDAI National awards.">
+            <a href="#awards" onclick="closeMegaMenu()">
               <span class="menu-num">05</span>
-              <span>Healthcare &amp; Wellbeing</span>
+              <span>Accolades</span>
             </a>
           </li>
-          <li class="mega-menu-item" data-preview="assets/images/hero.jpg" data-caption-title="Our 29-Year Legacy" data-caption-desc="Guided by Dr. Nitin Nyati's vision of uncompromised quality, integrity, and on-time delivery.">
-            <a href="#about" onclick="closeMegaMenu()">
-              <span class="menu-num">06</span>
-              <span>About Nyati Group</span>
-            </a>
-          </li>
-          <li class="mega-menu-item" data-preview="assets/images/unitree.jpg" data-caption-title="Corporate Headquarters" data-caption-desc="Connect with our residential consultants, commercial desk, or international NRI advisory.">
+          <li class="mega-menu-item" data-preview="assets/images/hero.jpg" data-caption-title="Contact &amp; Site Visit" data-caption-desc="Connect with our senior property advisors, corporate headquarters, or international NRI desk.">
             <a href="#inquiry" onclick="closeMegaMenu()">
-              <span class="menu-num">07</span>
-              <span>Contact &amp; Site Visit</span>
+              <span class="menu-num">06</span>
+              <span>Contact</span>
             </a>
           </li>
         </ul>
