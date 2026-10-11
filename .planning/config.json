@@ -1,0 +1,9 @@
+{
+  "mode": "standalone",
+  "workflow": "fast",
+  "brand": {
+    "name": "Nyati Group",
+    "established": 1997,
+    "headquarters": "Pune, Maharashtra, India"
+  }
+}
