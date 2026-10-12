@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About SR Developer | History, Vision, Mission &amp; Leadership</title>
+  <meta name="description" content="Discover the 29-year legacy of SR Developer. Learn about our founding history, corporate vision, nation-building mission, and executive leadership team.">
+  <link rel="canonical" href="https://srdeveloper.com/about.html">
+
+  <!-- Google Fonts: Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Dynamic Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- 2-Second Sub-Page Intro Animation Curtain -->
+  <div class="intro-curtain" id="introCurtain" data-intro-title="ABOUT SR DEVELOPER" data-intro-subtitle="HISTORY • VISION • MISSION • LEADERSHIP">
+    <div class="intro-container">
+      <div class="intro-text-step" id="introStep1"></div>
+    </div>
+  </div>
+
+  <!-- Transparent-to-Solid Sticky Header -->
+  <header class="main-header" id="mainHeader">
+    <div class="container header-inner">
+      <a href="index.html?from=subpage" class="brand-logo" aria-label="SR Developer Homepage">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2" />
+            <polyline points="2 17 12 22 22 17" />
+            <polyline points="2 12 12 17 22 12" />
+          </svg>
+        </div>
+        <div class="logo-text-block">
+          <span class="logo-brand-name">SR DEVELOPER</span>
+          <span class="logo-tagline">Creating Landmarks Since 1997</span>
+        </div>
+      </a>
+
+      <!-- 3-Line Hamburger Menu Toggle Button (Right Corner) -->
+      <div class="header-actions">
+        <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Interactive Mega Menu Overlay -->
+  <div class="mega-menu-overlay" id="megaMenuOverlay">
+    <button class="mega-menu-close-btn" onclick="closeMegaMenu()" aria-label="Close Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    <div class="mega-menu-left">
+      <div>
+        <p class="mega-menu-header-tag">SR Developer Conglomerate Navigation</p>
+        <ul class="mega-menu-links">
+          <li class="mega-menu-item" data-preview="assets/images/hero.jpg" data-caption-title="Home Page" data-caption-desc="Return to the executive homepage showcase.">
+            <a href="index.html?from=subpage">
+              <div class="menu-main-row">
+                <span class="menu-num">00</span>
+                <span class="menu-title">Home</span>
+              </div>
+              <span class="menu-subitems">Main Overview &amp; Interactive Showcase</span>
+            </a>
+          </li>
+          <li class="mega-menu-item active" data-preview="assets/images/hero.jpg" data-caption-title="About SR Developer" data-caption-desc="Founded in 1997. Over 29 years of architectural distinction, ethical governance, and nation-building.">
+            <a href="about.html">
+              <div class="menu-main-row">
+                <span class="menu-num">01</span>
+                <span class="menu-title">About</span>
+              </div>
+              <span class="menu-subitems">History, Vision, Mission, Leadership</span>
+            </a>
+          </li>
+          <li class="mega-menu-item" data-preview="assets/images/unitree.jpg" data-caption-title="Our Core Business Verticals" data-caption-desc="End-to-end engineering excellence across high-rise residential construction, civil infrastructure EPC, and integrated master developments.">
+            <a href="services.html">
+              <div class="menu-main-row">
+                <span class="menu-num">02</span>
+                <span class="menu-title">Our Services</span>
+              </div>
+              <span class="menu-subitems">Construction, Infrastructure, Development</span>
+            </a>
+          </li>
+          <li class="mega-menu-item" data-preview="assets/images/emerald.jpg" data-caption-title="Prestigious Landmark Projects" data-caption-desc="Explore ultra-luxury gated residences, commercial IT business towers, and mixed-use urban landmarks.">
+            <a href="projects.html">
+              <div class="menu-main-row">
+                <span class="menu-num">03</span>
+                <span class="menu-title">Projects</span>
+              </div>
+              <span class="menu-subitems">Ongoing, Completed, Upcoming Projects</span>
+            </a>
+          </li>
+          <li class="mega-menu-item" data-preview="assets/images/esteban.jpg" data-caption-title="Project Visual Gallery" data-caption-desc="High-definition architectural photography, cinematic walkthrough videos, and aerial drone site perspectives.">
+            <a href="gallery.html">
+              <div class="menu-main-row">
+                <span class="menu-num">04</span>
+                <span class="menu-title">Project Gallery</span>
+              </div>
+              <span class="menu-subitems">Photos, Videos, Drone Views</span>
+            </a>
+          </li>
+          <li class="mega-menu-item" data-preview="assets/images/luxury-interior.jpg" data-caption-title="Certifications &amp; Accolades" data-caption-desc="Triple ISO quality compliance, CREDAI &amp; BAI awards, and over 10 million safe LTI-free work hours.">
+            <a href="certifications.html">
+              <div class="menu-main-row">
+                <span class="menu-num">05</span>
+                <span class="menu-title">Certifications</span>
+              </div>
+              <span class="menu-subitems">ISO, Awards, Safety Certificates</span>
+            </a>
+          </li>
+          <li class="mega-menu-item" data-preview="assets/images/corinthians.jpg" data-caption-title="Contact &amp; Connect" data-caption-desc="Institutional enquiry desk, corporate office map in Yerwada, and direct WhatsApp concierge assistance.">
+            <a href="contact.html">
+              <div class="menu-main-row">
+                <span class="menu-num">06</span>
+                <span class="menu-title">Contact Us</span>
+              </div>
+              <span class="menu-subitems">Enquiry Form, Map, WhatsApp</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mega-menu-footer">
+        <div>
+          <strong style="color: var(--dark-blue);">Headquarters:</strong> 6th Floor, SR Unitree, Yerwada, Pune - 411006
+        </div>
+        <div>
+          <a href="tel:+912066863333" style="color: var(--dark-blue); font-weight: 700;">+91 20 6686 3333</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mega-menu-right">
+      <img src="assets/images/hero.jpg" alt="Preview Showcase" class="mega-preview-bg" id="megaPreviewImg">
+      <div class="mega-preview-overlay"></div>
+      <div class="mega-preview-caption">
+        <h4 id="megaCaptionTitle">About SR Developer</h4>
+        <p id="megaCaptionDesc">Founded in 1997. Over 29 years of architectural distinction, ethical governance, and nation-building.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sub-Page Hero Banner with Blurred Background & Large Title -->
+  <section class="subpage-hero">
+    <div class="subpage-hero-bg" style="background-image: url('assets/images/hero.jpg');"></div>
+    <div class="subpage-hero-overlay"></div>
+    <div class="subpage-hero-content">
+      <span class="subpage-hero-tag">Corporate Heritage Est. 1997</span>
+      <h1 class="subpage-hero-title">About SR Developer</h1>
+      <p class="subpage-hero-desc">History, Vision, Mission, and Leadership driving Western India's infrastructure development and landmark architectural legacy.</p>
+      <div class="subpage-scroll-cue">
+        <span>Scroll Down For Detailed Information</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb Navigation Bar -->
+  <nav class="breadcrumb-strip" style="background: var(--off-white); border-bottom: 1px solid var(--border-subtle); padding: 0.85rem 0;" aria-label="Breadcrumb">
+    <div class="container" style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; font-weight: 600; color: var(--dark-blue);">
+      <a href="index.html?from=subpage" style="color: var(--dark-blue); opacity: 0.8;">Home</a>
+      <span>/</span>
+      <span style="color: var(--dark-blue); font-weight: 700;">About SR Developer</span>
+    </div>
+  </nav>
+
+  <!-- Full History Section -->
+  <section style="padding: 5rem 0; background: var(--pure-white);">
+    <div class="container">
+      <div style="max-width: 900px; margin-bottom: 3.5rem;">
+        <span class="section-tag">Our History</span>
+        <h2 class="section-heading">29 Years of Engineering Mastery</h2>
+        <p class="section-subtext">
+          Founded in 1997 with a pioneering vision to transform Pune's real estate landscape, SR Developer began as an ambitious infrastructure contracting enterprise. Over nearly three decades of relentless commitment, the conglomerate has grown exponentially into Western India's premier development powerhouse.
+        </p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+        <div style="background: var(--off-white); padding: 2.2rem; border-radius: 6px; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+          <div style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 800; color: var(--dark-blue); margin-bottom: 0.5rem;">1997 - 2005</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 0.75rem;">Foundational Engineering &amp; Contracting</h3>
+          <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.7;">
+            Mastered precision concrete civil contracting for state infrastructure, bridges, and industrial layouts. Established the core corporate reputation for uncompromising structural integrity and zero debt exposure.
+          </p>
+        </div>
+
+        <div style="background: var(--off-white); padding: 2.2rem; border-radius: 6px; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+          <div style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 800; color: var(--dark-blue); margin-bottom: 0.5rem;">2006 - 2016</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 0.75rem;">Scale, Integrated Townships &amp; Hospitality</h3>
+          <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.7;">
+            Expanded into integrated residential gated communities and landmark leisure projects including The Corinthians Resort &amp; Club. Pioneered early adoption of earthquake-resistant structural standards in South Pune.
+          </p>
+        </div>
+
+        <div style="background: var(--off-white); padding: 2.2rem; border-radius: 6px; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+          <div style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 800; color: var(--dark-blue); margin-bottom: 0.5rem;">2017 - Present</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 0.75rem;">German MIVAN Precision &amp; Grade-A IT Parks</h3>
+          <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.7;">
+            Commissioned SR Unitree corporate tech park in Yerwada and ultra-luxury residential towers like SR Emerald and Esteban II. 100% MahaRERA statutory escrow compliance and delivered 40M+ sq. ft. of built space.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision, Mission & Values -->
+  <section style="padding: 5rem 0; background: var(--off-white); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto;">
+        <span class="section-tag">Purpose &amp; Principles</span>
+        <h2 class="section-heading">Vision, Mission &amp; Core Values</h2>
+        <p class="section-subtext" style="margin: 0 auto;">Our ethical bedrock defines every foundation we pour, every blueprint we finalize, and every community we cultivate.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+        <!-- Vision -->
+        <div style="background: var(--pure-white); padding: 2.5rem; border-radius: 6px; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+          <div style="width: 52px; height: 52px; background: var(--light-sky-blue); border-radius: 6px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--dark-blue);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="10"/><path d="m10 15 5-3-5-3v6Z"/></svg>
+          </div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.45rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 1rem;">Corporate Vision</h3>
+          <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.75;">
+            To be Western India's most admired, technically progressive, and sustainable infrastructure conglomerate—creating enduring architectural landmarks that enrich modern lifestyle while preserving environmental harmony for generations to come.
+          </p>
+        </div>
+
+        <!-- Mission -->
+        <div style="background: var(--pure-white); padding: 2.5rem; border-radius: 6px; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+          <div style="width: 52px; height: 52px; background: var(--light-sky-blue); border-radius: 6px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--dark-blue);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+          </div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.45rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 1rem;">Corporate Mission</h3>
+          <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.75;">
+            To deliver every residential and commercial project with German-engineered monolithic precision, statutory on-time possession guarantees, transparent escrow governance, and customer-first care that creates lifetime asset value for our 15,000+ resident families.
+          </p>
+        </div>
+
+        <!-- Values -->
+        <div style="background: var(--pure-white); padding: 2.5rem; border-radius: 6px; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+          <div style="width: 52px; height: 52px; background: var(--light-sky-blue); border-radius: 6px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--dark-blue);">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 style="font-family: var(--font-serif); font-size: 1.45rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 1rem;">Core Values</h3>
+          <ul style="list-style: none; padding: 0; color: var(--text-body); font-size: 0.95rem; line-height: 1.8;">
+            <li><strong style="color: var(--dark-blue);">• Engineering Perfection:</strong> Zero structural compromise with Fe550D steel &amp; M40 concrete.</li>
+            <li><strong style="color: var(--dark-blue);">• Unquestioned Trust:</strong> 100% MahaRERA transparency and clean title holdings.</li>
+            <li><strong style="color: var(--dark-blue);">• Green Stewardship:</strong> IGBC Gold &amp; LEED compliant sustainable resource management.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Executive Leadership Directory -->
+  <section style="padding: 5rem 0; background: var(--pure-white);">
+    <div class="container">
+      <div style="max-width: 850px; margin-bottom: 3.5rem;">
+        <span class="section-tag">Executive Board</span>
+        <h2 class="section-heading">Visionary Leadership</h2>
+        <p class="section-subtext">Guided by veterans with extensive civil engineering acumen, urban planning expertise, and institutional governance.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+        <!-- Leader 1 -->
+        <div style="background: var(--off-white); border-radius: 6px; border: 1.5px solid var(--border-subtle); overflow: hidden; box-shadow: var(--shadow-sm);">
+          <div style="padding: 2rem;">
+            <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.15em; margin-bottom: 0.4rem;">Founder &amp; Group Chairman</div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 0.85rem;">Suresh R.</h3>
+            <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.7;">
+              Pioneered SR Developer in 1997. Over 35 years in infrastructure engineering, masterminding landmark acquisitions, institutional relationships, and policy governance.
+            </p>
+          </div>
+        </div>
+
+        <!-- Leader 2 -->
+        <div style="background: var(--off-white); border-radius: 6px; border: 1.5px solid var(--border-subtle); overflow: hidden; box-shadow: var(--shadow-sm);">
+          <div style="padding: 2rem;">
+            <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.15em; margin-bottom: 0.4rem;">Managing Director &amp; CEO</div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 0.85rem;">Rohan S.</h3>
+            <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.7;">
+              Alumnus of Columbia University. Spearheads high-rise development, German formwork technology integration, smart automation, and capital allocation.
+            </p>
+          </div>
+        </div>
+
+        <!-- Leader 3 -->
+        <div style="background: var(--off-white); border-radius: 6px; border: 1.5px solid var(--border-subtle); overflow: hidden; box-shadow: var(--shadow-sm);">
+          <div style="padding: 2rem;">
+            <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.15em; margin-bottom: 0.4rem;">Chief Technical Officer</div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 0.85rem;">Dr. Ananya K.</h3>
+            <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.7;">
+              PhD in Structural Engineering from IIT Bombay. Leads structural QA/QC, seismic resilience compliance, and advanced BIM 3D modeling across all sites.
+            </p>
+          </div>
+        </div>
+
+        <!-- Leader 4 -->
+        <div style="background: var(--off-white); border-radius: 6px; border: 1.5px solid var(--border-subtle); overflow: hidden; box-shadow: var(--shadow-sm);">
+          <div style="padding: 2rem;">
+            <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.15em; margin-bottom: 0.4rem;">Director, Infrastructure EPC</div>
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 0.85rem;">Vikram M.</h3>
+            <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.7;">
+              28+ years steering heavy civil EPC, bridges, flyovers, and stormwater infrastructure projects across Maharashtra with zero LTI safety records.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Row -->
+      <div class="teaser-action-row" style="margin-top: 4rem;">
+        <a href="index.html?from=subpage" class="btn-teaser-view">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+          Back To Home Page
+        </a>
+        <a href="projects.html" class="btn-teaser-view" style="margin-left: 1rem; background: var(--pure-white); color: var(--dark-blue); border-color: var(--soft-sky-blue);">
+          Explore Landmark Projects
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corporate Footer -->
+  <footer style="background: var(--dark-blue); color: var(--pure-white); padding: 4.5rem 0 2.5rem 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2.5rem; margin-bottom: 3.5rem;">
+        <div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 1rem; color: var(--pure-white);">SR DEVELOPER</h4>
+          <p style="color: var(--light-sky-blue); font-size: 0.9rem; line-height: 1.7;">
+            Western India's premier infrastructure and luxury residential conglomerate since 1997. Over 40 million sq. ft. of executed landmarks.
+          </p>
+        </div>
+        <div>
+          <h5 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--soft-sky-blue); margin-bottom: 1rem;">Direct Navigation</h5>
+          <ul style="list-style: none; padding: 0; line-height: 2.2; font-size: 0.9rem;">
+            <li><a href="index.html?from=subpage" style="color: var(--pure-white);">Home</a></li>
+            <li><a href="about.html" style="color: var(--pure-white); font-weight: 700;">About Us</a></li>
+            <li><a href="services.html" style="color: var(--pure-white);">Our Services</a></li>
+            <li><a href="projects.html" style="color: var(--pure-white);">Landmark Projects</a></li>
+            <li><a href="gallery.html" style="color: var(--pure-white);">Project Gallery</a></li>
+            <li><a href="certifications.html" style="color: var(--pure-white);">Certifications</a></li>
+            <li><a href="contact.html" style="color: var(--pure-white);">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--soft-sky-blue); margin-bottom: 1rem;">Corporate Office</h5>
+          <p style="color: var(--light-sky-blue); font-size: 0.9rem; line-height: 1.7;">
+            6th Floor, SR Unitree,<br>
+            Pune-Ahmednagar Road, Yerwada,<br>
+            Pune, Maharashtra - 411006
+          </p>
+          <p style="margin-top: 1rem; color: var(--pure-white); font-weight: 700;">
+            Tel: +91 20 6686 3333
+          </p>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: var(--light-sky-blue);">
+        <div>&copy; 1997-2026 SR Developer Conglomerate. All Rights Reserved.</div>
+        <div>MahaRERA Statutory Compliance &bull; Escrow Governed</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -3,64 +3,38 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nyati Group | Top Luxury Real Estate Developers in Pune Since 1997</title>
-  <meta name="description" content="Nyati Group is Pune's leading real estate and infrastructure conglomerate since 1997. Discover luxury residential apartments, Grade-A commercial spaces, Nyati EPC, and 5-star hospitality.">
-  <link rel="canonical" href="https://nyatigroup.com/">
+  <title>SR Developer | Premier Real Estate, Infrastructure &amp; Construction Conglomerate</title>
+  <meta name="description" content="SR Developer is Western India's premier real estate and infrastructure development conglomerate established in 1997. Luxury residences, commercial tech parks, EPC infrastructure, and sustainable developments.">
+  <link rel="canonical" href="https://srdeveloper.com/">
 
   <!-- Google Fonts: Cinzel & Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- 2-Step Cinematic Intro Animation Overlay (NYATI 3s -> BUILDER AND DEVELOPER 3s -> Slide Up) -->
+  <!-- Dynamic Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- 2-Step Cinematic Intro Animation Overlay (Light Corporate Theme) -->
   <div class="intro-curtain" id="introCurtain">
     <div class="intro-container">
-      <!-- Step 1: NYATI (shows for 3 sec) -->
       <div class="intro-text-step" id="introStep1">
-        <h1 class="intro-huge-title">NYATI</h1>
+        <h1 class="intro-huge-title">SR DEVELOPER</h1>
       </div>
-
-      <!-- Step 2: BUILDER AND DEVELOPER (shows for 3 sec) -->
       <div class="intro-text-step" id="introStep2">
         <h2 class="intro-subtitle-title">BUILDER AND DEVELOPER</h2>
       </div>
     </div>
   </div>
 
-  <!-- Top Announcement Bar -->
-  <aside class="top-bar" aria-label="Announcement Bar">
-    <div class="container top-bar-inner">
-      <div class="top-bar-left">
-        <span>
-          <span class="top-bar-badge">Legacy Since 1997</span>
-          Pune’s Most Admired Real Estate &amp; Infrastructure Conglomerate
-        </span>
-      </div>
-      <div class="top-bar-right">
-        <a href="#projects" class="top-bar-link">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-          Residential
-        </a>
-        <a href="#projects" class="top-bar-link">Commercial Hubs</a>
-        <a href="#verticals" class="top-bar-link">Nyati EPC</a>
-        <a href="#inquiry" class="top-bar-link">Defence Zone</a>
-        <a href="#inquiry" class="top-bar-link">NRI Desk</a>
-        <a href="tel:+912066863333" class="top-bar-link" style="color: var(--nyati-gold-light); font-weight:600;">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          +91 20 6686 3333
-        </a>
-      </div>
-    </div>
-  </aside>
-
-  <!-- Sticky Header -->
+  <!-- Sticky Full-Display Header (Reveals ONLY on scroll; Hidden at initial view) -->
   <header class="main-header" id="mainHeader">
     <div class="container header-inner">
-      <a href="#" class="brand-logo" aria-label="Nyati Group Homepage">
+      <a href="#" class="brand-logo" aria-label="SR Developer Homepage">
         <div class="logo-symbol">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="12 2 2 7 12 12 22 7 12 2" />
@@ -69,14 +43,14 @@
           </svg>
         </div>
         <div class="logo-text-block">
-          <span class="logo-brand-name">NYATI</span>
+          <span class="logo-brand-name">SR DEVELOPER</span>
           <span class="logo-tagline">Creating Landmarks Since 1997</span>
         </div>
       </a>
 
-      <!-- Header Actions (Clean Hamburger Toggle) -->
+      <!-- 3-Line Hamburger Menu Toggle Button (Right Corner) -->
       <div class="header-actions">
-        <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle Fullscreen Menu">
+        <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle Navigation Menu">
           <span></span>
           <span></span>
           <span></span>
@@ -85,48 +59,78 @@
     </div>
   </header>
 
-  <!-- Fullscreen Interactive Mega Menu Overlay -->
+  <!-- Fullscreen Interactive Mega Menu Overlay (Requested 6 Core Categories) -->
   <div class="mega-menu-overlay" id="megaMenuOverlay">
+    <button class="mega-menu-close-btn" onclick="closeMegaMenu()" aria-label="Close Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
     <div class="mega-menu-left">
       <div>
-        <p style="font-size:0.75rem; text-transform:uppercase; letter-spacing:0.2em; color:var(--nyati-gold); margin-bottom:2rem;">
-          Nyati Group Navigation
-        </p>
+        <p class="mega-menu-header-tag">SR Developer Conglomerate Navigation</p>
         <ul class="mega-menu-links">
-          <li class="mega-menu-item active" data-preview="assets/images/hero.jpg" data-caption-title="About Nyati Group" data-caption-desc="A legacy built on concrete trust, architectural distinction, and innovation since 1997.">
-            <a href="#about" onclick="closeMegaMenu()">
-              <span class="menu-num">01</span>
-              <span>About Us</span>
+          <!-- Item 1: About -->
+          <li class="mega-menu-item active" data-preview="assets/images/hero.jpg" data-caption-title="About SR Developer" data-caption-desc="Founded in 1997. Over 29 years of architectural distinction, ethical governance, and nation-building.">
+            <a href="about.html">
+              <div class="menu-main-row">
+                <span class="menu-num">01</span>
+                <span class="menu-title">About</span>
+              </div>
+              <span class="menu-subitems">History, Vision, Mission, Leadership</span>
             </a>
           </li>
-          <li class="mega-menu-item" data-preview="assets/images/emerald.jpg" data-caption-title="Landmark Projects" data-caption-desc="Premier residential enclaves, Grade-A commercial parks, and luxury towers across Pune.">
-            <a href="#projects" onclick="closeMegaMenu()">
-              <span class="menu-num">02</span>
-              <span>Projects</span>
+
+          <!-- Item 2: Our Services -->
+          <li class="mega-menu-item" data-preview="assets/images/unitree.jpg" data-caption-title="Our Core Business Verticals" data-caption-desc="End-to-end engineering excellence across high-rise residential construction, civil infrastructure EPC, and integrated master developments.">
+            <a href="services.html">
+              <div class="menu-main-row">
+                <span class="menu-num">02</span>
+                <span class="menu-title">Our Services</span>
+              </div>
+              <span class="menu-subitems">Construction, Infrastructure, Development</span>
             </a>
           </li>
-          <li class="mega-menu-item" data-preview="assets/images/corinthians.jpg" data-caption-title="The Corinthians Resort &amp; Club" data-caption-desc="Pune's legendary 25-acre Egyptian-themed luxury oasis, craft brewery, and banquet haven.">
-            <a href="#corinthians" onclick="closeMegaMenu()">
-              <span class="menu-num">03</span>
-              <span>Hospitality</span>
+
+          <!-- Item 3: Projects -->
+          <li class="mega-menu-item" data-preview="assets/images/emerald.jpg" data-caption-title="Prestigious Landmark Projects" data-caption-desc="Explore ultra-luxury gated residences, commercial IT business towers, and mixed-use urban landmarks.">
+            <a href="projects.html">
+              <div class="menu-main-row">
+                <span class="menu-num">03</span>
+                <span class="menu-title">Projects</span>
+              </div>
+              <span class="menu-subitems">Ongoing, Completed, Upcoming Projects</span>
             </a>
           </li>
-          <li class="mega-menu-item" data-preview="assets/images/luxury-interior.jpg" data-caption-title="Core Values &amp; Philosophy" data-caption-desc="High quality construction, in sync with nature, professional service, and absolute transparency.">
-            <a href="#values" onclick="closeMegaMenu()">
-              <span class="menu-num">04</span>
-              <span>Core Values</span>
+
+          <!-- Item 4: Project Gallery -->
+          <li class="mega-menu-item" data-preview="assets/images/esteban.jpg" data-caption-title="Project Visual Gallery" data-caption-desc="High-definition architectural photography, cinematic walkthrough videos, and aerial drone site perspectives.">
+            <a href="gallery.html">
+              <div class="menu-main-row">
+                <span class="menu-num">04</span>
+                <span class="menu-title">Project Gallery</span>
+              </div>
+              <span class="menu-subitems">Photos, Videos, Drone Views</span>
             </a>
           </li>
-          <li class="mega-menu-item" data-preview="assets/images/unitree.jpg" data-caption-title="Awards &amp; Accolades" data-caption-desc="Recognized by Hurun India Stars of Deccan, Times Realty Icons, and CREDAI National awards.">
-            <a href="#awards" onclick="closeMegaMenu()">
-              <span class="menu-num">05</span>
-              <span>Accolades</span>
+
+          <!-- Item 5: Certifications -->
+          <li class="mega-menu-item" data-preview="assets/images/luxury-interior.jpg" data-caption-title="Certifications &amp; Accolades" data-caption-desc="Triple ISO quality compliance, CREDAI &amp; BAI awards, and over 10 million safe LTI-free work hours.">
+            <a href="certifications.html">
+              <div class="menu-main-row">
+                <span class="menu-num">05</span>
+                <span class="menu-title">Certifications</span>
+              </div>
+              <span class="menu-subitems">ISO, Awards, Safety Certificates</span>
             </a>
           </li>
-          <li class="mega-menu-item" data-preview="assets/images/hero.jpg" data-caption-title="Contact &amp; Site Visit" data-caption-desc="Connect with our senior property advisors, corporate headquarters, or international NRI desk.">
-            <a href="#inquiry" onclick="closeMegaMenu()">
-              <span class="menu-num">06</span>
-              <span>Contact</span>
+
+          <!-- Item 6: Contact Us -->
+          <li class="mega-menu-item" data-preview="assets/images/corinthians.jpg" data-caption-title="Contact &amp; Connect" data-caption-desc="Institutional enquiry desk, corporate office map in Yerwada, and direct WhatsApp concierge assistance.">
+            <a href="contact.html">
+              <div class="menu-main-row">
+                <span class="menu-num">06</span>
+                <span class="menu-title">Contact Us</span>
+              </div>
+              <span class="menu-subitems">Enquiry Form, Map, WhatsApp</span>
             </a>
           </li>
         </ul>
@@ -134,52 +138,50 @@
 
       <div class="mega-menu-footer">
         <div>
-          <span style="color:var(--nyati-gold); font-weight:600;">Corporate Office:</span> Yerwada, Nagar Road, Pune
+          <strong style="color: var(--dark-blue);">Headquarters:</strong> 6th Floor, SR Unitree, Yerwada, Pune - 411006
         </div>
         <div>
-          <a href="tel:+912066863333" style="color:#ffffff;">+91 20 6686 3333</a>
+          <a href="tel:+912066863333" style="color: var(--dark-blue); font-weight: 700;">+91 20 6686 3333</a>
         </div>
       </div>
     </div>
 
     <div class="mega-menu-right">
-      <img src="assets/images/hero.jpg" alt="Preview Visual" class="mega-preview-bg active" id="megaPreviewImg">
+      <img src="assets/images/hero.jpg" alt="Preview Showcase" class="mega-preview-bg" id="megaPreviewImg">
       <div class="mega-preview-overlay"></div>
       <div class="mega-preview-caption">
-        <h4 id="megaCaptionTitle">Nyati Real Estate</h4>
-        <p id="megaCaptionDesc">Crafting landmark residential towers and master-planned townships in Pune's finest growth corridors.</p>
+        <h4 id="megaCaptionTitle">About SR Developer</h4>
+        <p id="megaCaptionDesc">Founded in 1997. Over 29 years of architectural distinction, ethical governance, and nation-building.</p>
       </div>
     </div>
   </div>
 
-  <!-- Clean Cinematic Hero Showcase Slider -->
+  <!-- Hero Banner Showcase Slider (Unobstructed View; No Header / No Menu at Top) -->
   <section class="hero-section" id="home">
     <div class="hero-slider-wrap">
-      <!-- Slide 1 -->
-      <div class="hero-slide active" data-index="1" data-tag="Pune's Premier Developer" data-title="Creating Landmarks, Crafting Lifestyles">
-        <img src="assets/images/hero.jpg" alt="Nyati Group Landmark Skyline Architecture">
+      <!-- Slide 1: Grade-A Corporate IT Parks -->
+      <div class="hero-slide active" data-index="1" data-tag="Grade-A Corporate IT Parks" data-title="SR Unitree &amp; Commercial Infrastructure">
+        <img src="assets/images/unitree.jpg" alt="SR Unitree Commercial Tech Park">
       </div>
-      <!-- Slide 2 -->
-      <div class="hero-slide" data-index="2" data-tag="25-Acre 5-Star Haven" data-title="The Corinthians Resort &amp; Club">
-        <img src="assets/images/corinthians.jpg" alt="The Corinthians Resort &amp; Club Pune">
+      <!-- Slide 2: Luxury Residential Landmark -->
+      <div class="hero-slide" data-index="2" data-tag="Luxury Residential Landmark" data-title="SR Emerald &amp; Esteban II Living Spaces">
+        <img src="assets/images/emerald.jpg" alt="SR Emerald Luxury Residences">
       </div>
-      <!-- Slide 3 -->
-      <div class="hero-slide" data-index="3" data-tag="Grade-A Corporate Parks" data-title="Nyati Unitree &amp; Commercial Hubs">
-        <img src="assets/images/unitree.jpg" alt="Nyati Unitree Yerwada">
+      <!-- Slide 3: Premier Conglomerate -->
+      <div class="hero-slide" data-index="3" data-tag="Premier Real Estate Conglomerate" data-title="Engineering Landmarks Across 40M+ Sq. Ft.">
+        <img src="assets/images/hero.jpg" alt="SR Developer Skyline Architecture">
       </div>
-      <!-- Slide 4 -->
-      <div class="hero-slide" data-index="4" data-tag="The Luxury Collection" data-title="Nyati Emerald &amp; Esteban II">
-        <img src="assets/images/emerald.jpg" alt="Nyati Emerald Baner">
+      <!-- Slide 4: 5-Star Hospitality -->
+      <div class="hero-slide" data-index="4" data-tag="5-Star Hospitality &amp; Sanctuary" data-title="The Corinthians Resort &amp; Club">
+        <img src="assets/images/corinthians.jpg" alt="Corinthians Luxury Resort">
       </div>
     </div>
 
-    <!-- Minimalist Slide Caption -->
+    <!-- Sleek Compact Slide Caption (Smaller Size, Clean Tag & Title Only) -->
     <div class="hero-slide-caption">
-      <span class="hero-caption-tag" id="heroCaptionTag">Pune's Premier Developer</span>
-      <h2 class="hero-caption-title" id="heroCaptionTitle">Creating Landmarks, Crafting Lifestyles</h2>
+      <span class="hero-caption-tag" id="heroCaptionTag">Grade-A Corporate IT Parks</span>
+      <h2 class="hero-caption-title" id="heroCaptionTitle">SR Unitree &amp; Commercial Infrastructure</h2>
     </div>
-
-
   </section>
 
   <!-- Milestones & Credibility Strip -->
@@ -188,599 +190,372 @@
       <div class="milestones-grid">
         <div class="milestone-item">
           <div class="milestone-number" data-count="29">29+</div>
-          <div class="milestone-label">Years of Excellence</div>
+          <div class="milestone-label">Years of Engineering Legacy</div>
         </div>
         <div class="milestone-item">
           <div class="milestone-number" data-count="40">40M+</div>
-          <div class="milestone-label">Sq. Ft. Space Delivered</div>
+          <div class="milestone-label">Sq. Ft. Area Delivered</div>
         </div>
         <div class="milestone-item">
           <div class="milestone-number" data-count="70">70+</div>
-          <div class="milestone-label">Landmark Projects</div>
+          <div class="milestone-label">Landmark Projects Built</div>
         </div>
         <div class="milestone-item">
           <div class="milestone-number" data-count="15000">15,000+</div>
-          <div class="milestone-label">Delighted Families</div>
+          <div class="milestone-label">Delighted Resident Families</div>
         </div>
         <div class="milestone-item">
-          <div class="milestone-number" data-count="5">5</div>
-          <div class="milestone-label">Business Verticals</div>
+          <div class="milestone-number" data-count="100">100%</div>
+          <div class="milestone-label">MahaRERA Statutory Compliance</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Who We Are Section (Editorial Split) -->
-  <section class="section-editorial" id="about">
+  <!-- 1. ABOUT TEASER SECTION -->
+  <section class="section-about" id="about">
     <div class="container">
-      <div class="editorial-grid">
-        <div class="editorial-image-wrapper">
-          <img src="assets/images/hero.jpg" alt="Nyati Group Completed Landmark Project">
-          <span class="image-badge-actual">Actual Photo*</span>
-          <div class="editorial-floating-stat">
-            <div class="floating-stat-num">1997</div>
-            <div class="floating-stat-desc">Founded in Pune with a commitment to absolute transparency and on-time delivery.</div>
+      <div class="about-editorial-grid">
+        <div class="about-image-card">
+          <img src="assets/images/hero.jpg" alt="SR Developer Skyline Infrastructure">
+          <span class="about-badge-legacy">Legacy Since 1997</span>
+          <div class="about-floating-stat">
+            <div class="stat-num">1997</div>
+            <div class="stat-desc">Inception in Pune, built on uncompromised structural integrity, timely handovers, and transparent corporate governance.</div>
           </div>
         </div>
 
-        <div class="editorial-content-box">
-          <span class="section-tag">Who We Are</span>
-          <h2 class="section-heading">A Legacy Built On Concrete Trust &amp; Innovation</h2>
-          
-          <p class="editorial-lead">
-            The Nyati Group has been at the forefront of Pune’s Real Estate Scenario since 1997. The brand stands tall amongst the most respected and admired real estate conglomerates in India, shaping modern lifestyles with acute focus on architecture, structural longevity, and customer-first values.
+        <div>
+          <span class="section-tag">About SR Developer</span>
+          <h2 class="section-heading">Three Decades of Structural Mastery &amp; Institutional Trust</h2>
+          <p class="section-subtext" style="margin-bottom: 1.4rem;">
+            Established in 1997, <strong>SR Developer</strong> has engineered Western India's urban landscape into thriving architectural destinations. From high-rise luxury gated communities and Grade-A IT business corridors to vital national turnkey EPC civil infrastructure.
+          </p>
+          <p class="section-subtext" style="margin-bottom: 2rem;">
+            Delivered over 40 million sq. ft. of prime real estate with German monolithic MIVAN formwork precision, zero debt exposure, and 100% statutory MahaRERA escrow governance.
           </p>
 
-          <p style="color: #6b7280; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem;">
-            Under the visionary stewardship of Chairman &amp; Managing Director Dr. Nitin Nyati, the group has diversified across premium residential towers, IT business hubs, nationwide infrastructure EPC contracts, luxury hospitality, and holistic wellbeing.
-          </p>
-
-          <ul class="editorial-features-list">
-            <li class="editorial-feature-item">
-              <svg class="feature-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>100% On-Time Delivery:</strong> Track record of delivering residential enclaves on or ahead of schedule.</span>
-            </li>
-            <li class="editorial-feature-item">
-              <svg class="feature-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Advanced German Formwork Construction:</strong> Engineered with shear wall technology for seismic safety and superior thermal insulation.</span>
-            </li>
-            <li class="editorial-feature-item">
-              <svg class="feature-check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-              <span><strong>Holistic Community Living:</strong> Integrated clubhouses, olympic-length swimming pools, green oxygen zones, and 24/7 smart security.</span>
-            </li>
-          </ul>
-
-          <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
-            <a href="#projects" class="btn-solid-luxury">
-              <span>View All Projects</span>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-            </a>
-            <button class="btn-luxury-outline" style="border-color:#11151c; color:#11151c;" onclick="openScheduleModal()">
-              Schedule A Consultation
-            </button>
+          <!-- 4 Pillars Short Highlights -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 2.2rem;">
+            <div style="background: var(--off-white); padding: 1rem; border-radius: 4px; border: 1px solid var(--border-subtle);">
+              <strong style="color: var(--dark-blue); font-size: 0.95rem; display: block; margin-bottom: 0.2rem;">• History</strong>
+              <span style="font-size: 0.85rem; color: var(--text-body);">29 years of landmark engineering since 1997</span>
+            </div>
+            <div style="background: var(--off-white); padding: 1rem; border-radius: 4px; border: 1px solid var(--border-subtle);">
+              <strong style="color: var(--dark-blue); font-size: 0.95rem; display: block; margin-bottom: 0.2rem;">• Vision</strong>
+              <span style="font-size: 0.85rem; color: var(--text-body);">Sustainable high-performance ecosystems</span>
+            </div>
+            <div style="background: var(--off-white); padding: 1rem; border-radius: 4px; border: 1px solid var(--border-subtle);">
+              <strong style="color: var(--dark-blue); font-size: 0.95rem; display: block; margin-bottom: 0.2rem;">• Mission</strong>
+              <span style="font-size: 0.85rem; color: var(--text-body);">Zero-defect execution &amp; lifetime customer value</span>
+            </div>
+            <div style="background: var(--off-white); padding: 1rem; border-radius: 4px; border: 1px solid var(--border-subtle);">
+              <strong style="color: var(--dark-blue); font-size: 0.95rem; display: block; margin-bottom: 0.2rem;">• Leadership</strong>
+              <span style="font-size: 0.85rem; color: var(--text-body);">Guided by senior civil engineers &amp; master architects</span>
+            </div>
           </div>
+
+          <a href="about.html" class="btn-teaser-view">
+            <span>Explore Full History, Vision &amp; Leadership</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Featured Projects Showcase Section -->
+  <!-- 2. OUR SERVICES TEASER SECTION -->
+  <section class="section-services" id="services">
+    <div class="container">
+      <div class="services-header">
+        <span class="section-tag">Core Capabilities</span>
+        <h2 class="section-heading">Our Three Core Business Verticals</h2>
+        <p class="section-subtext" style="margin: 0 auto;">
+          SR Developer delivers integrated, end-to-end execution across high-density residential towers, nationwide civil infrastructure contracts, and commercial urban developments.
+        </p>
+      </div>
+
+      <div class="services-grid">
+        <!-- Service 1: Construction -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="assets/images/emerald.jpg" alt="Construction Engineering" loading="lazy">
+          </div>
+          <div class="service-content">
+            <span class="service-tag">Vertical 01</span>
+            <h3 class="service-title">Construction Engineering</h3>
+            <p class="service-desc">
+              High-rise structural construction using German aluminium shear wall formwork, monolithic casting, and seismic Zone-III/IV compliance.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 2: Infrastructure -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="assets/images/unitree.jpg" alt="Civil Infrastructure EPC" loading="lazy">
+          </div>
+          <div class="service-content">
+            <span class="service-tag">Vertical 02</span>
+            <h3 class="service-title">Infrastructure &amp; EPC</h3>
+            <p class="service-desc">
+              Nation-building EPC delivering arterial roads, flyovers, railway bridges, smart utility ducting, and stormwater drainage networks.
+            </p>
+          </div>
+        </div>
+
+        <!-- Service 3: Development -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="assets/images/esteban.jpg" alt="Urban Real Estate Development" loading="lazy">
+          </div>
+          <div class="service-content">
+            <span class="service-tag">Vertical 03</span>
+            <h3 class="service-title">Urban Development</h3>
+            <p class="service-desc">
+              Master-planned smart gated communities, LEED Gold commercial IT business parks, and 5-star leisure hospitality destinations.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="teaser-action-row">
+        <a href="services.html" class="btn-teaser-view">
+          <span>View All Services &amp; Technical Specifications</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. PROJECTS TEASER SECTION -->
   <section class="section-projects" id="projects">
     <div class="container">
-      <div class="section-header-row">
-        <div>
-          <span class="section-tag">Prime Portfolio</span>
-          <h2 class="section-heading" style="margin-bottom: 0;">Featured Projects</h2>
-        </div>
-
-        <div class="projects-filter-tabs">
-          <button class="filter-tab-btn active" data-filter="all">All Projects</button>
-          <button class="filter-tab-btn" data-filter="residential">Residential</button>
-          <button class="filter-tab-btn" data-filter="commercial">Commercial</button>
-          <button class="filter-tab-btn" data-filter="luxury">Luxury Collection</button>
-          <button class="filter-tab-btn" data-filter="epc">Nyati EPC</button>
-        </div>
-      </div>
-
-      <!-- Projects Grid -->
-      <div class="projects-grid" id="projectsGrid">
-        
-        <!-- Project 1: Nyati Emerald (Baner) -->
-        <article class="project-card" data-category="residential luxury" data-location="baner" data-bhk="2bhk 3bhk">
-          <div class="project-visual">
-            <img src="assets/images/emerald.jpg" alt="Nyati Emerald Baner" loading="lazy">
-            <span class="project-status-badge">New Launch Phase</span>
-            <span class="project-location-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              Pune West &bull; <strong>Baner</strong>
-            </span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Nyati Emerald</h3>
-            <p class="project-specs">2 &amp; 3 Bed Ultra-Luxury Residences</p>
-            <div class="project-meta-row">
-              <div class="meta-col">
-                <span class="meta-label">Carpet Area</span>
-                <span class="meta-val">840 - 1,320 Sq. Ft.</span>
-              </div>
-              <div class="meta-col" style="text-align: right;">
-                <span class="meta-label">Starting Price</span>
-                <span class="meta-val text-bronze">&#8377; 1.15 Cr*</span>
-              </div>
-            </div>
-            <div class="project-actions">
-              <button class="btn-card-details" onclick="openProjectModal('emerald')">View Details</button>
-              <button class="btn-card-inquire" onclick="openScheduleModal('Nyati Emerald - Baner')">Site Visit</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 2: Nyati Esteban II (Undri) -->
-        <article class="project-card" data-category="residential" data-location="undri" data-bhk="2bhk 3bhk">
-          <div class="project-visual">
-            <img src="assets/images/esteban.jpg" alt="Nyati Esteban II Undri" loading="lazy">
-            <span class="project-status-badge">Under Construction</span>
-            <span class="project-location-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              Pune South &bull; <strong>Undri</strong>
-            </span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Nyati Esteban II</h3>
-            <p class="project-specs">2 &amp; 3 Bed Resort-Themed Residences</p>
-            <div class="project-meta-row">
-              <div class="meta-col">
-                <span class="meta-label">Carpet Area</span>
-                <span class="meta-val">760 - 1,180 Sq. Ft.</span>
-              </div>
-              <div class="meta-col" style="text-align: right;">
-                <span class="meta-label">Starting Price</span>
-                <span class="meta-val text-bronze">&#8377; 78 Lacs*</span>
-              </div>
-            </div>
-            <div class="project-actions">
-              <button class="btn-card-details" onclick="openProjectModal('esteban')">View Details</button>
-              <button class="btn-card-inquire" onclick="openScheduleModal('Nyati Esteban II - Undri')">Site Visit</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 3: Nyati Equinox (Bavdhan) -->
-        <article class="project-card" data-category="residential luxury" data-location="bavdhan" data-bhk="2bhk 3bhk 4bhk">
-          <div class="project-visual">
-            <img src="assets/images/hero.jpg" alt="Nyati Equinox Bavdhan" loading="lazy">
-            <span class="project-status-badge">Fast Possession</span>
-            <span class="project-location-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              Pune West &bull; <strong>Bavdhan</strong>
-            </span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Nyati Equinox</h3>
-            <p class="project-specs">2, 3 &amp; 4 Bed Scenic Horizon Homes</p>
-            <div class="project-meta-row">
-              <div class="meta-col">
-                <span class="meta-label">Carpet Area</span>
-                <span class="meta-val">890 - 1,840 Sq. Ft.</span>
-              </div>
-              <div class="meta-col" style="text-align: right;">
-                <span class="meta-label">Starting Price</span>
-                <span class="meta-val text-bronze">&#8377; 95 Lacs*</span>
-              </div>
-            </div>
-            <div class="project-actions">
-              <button class="btn-card-details" onclick="openProjectModal('equinox')">View Details</button>
-              <button class="btn-card-inquire" onclick="openScheduleModal('Nyati Equinox - Bavdhan')">Site Visit</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 4: Nyati Unitree (Yerwada Commercial) -->
-        <article class="project-card" data-category="commercial epc" data-location="yerwada" data-bhk="office">
-          <div class="project-visual">
-            <img src="assets/images/unitree.jpg" alt="Nyati Unitree Yerwada Commercial Landmark" loading="lazy">
-            <span class="project-status-badge">Ready Possession</span>
-            <span class="project-location-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              Central Pune &bull; <strong>Yerwada</strong>
-            </span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Nyati Unitree</h3>
-            <p class="project-specs">Grade-A Corporate &amp; IT Business Park</p>
-            <div class="project-meta-row">
-              <div class="meta-col">
-                <span class="meta-label">Workspaces</span>
-                <span class="meta-val">1,200 - 25,000 Sq. Ft.</span>
-              </div>
-              <div class="meta-col" style="text-align: right;">
-                <span class="meta-label">Status</span>
-                <span class="meta-val text-bronze">Corporate Ready</span>
-              </div>
-            </div>
-            <div class="project-actions">
-              <button class="btn-card-details" onclick="openProjectModal('unitree')">View Details</button>
-              <button class="btn-card-inquire" onclick="openScheduleModal('Nyati Unitree - Commercial')">Book Tour</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 5: Nyati Era (Dhanori) -->
-        <article class="project-card" data-category="residential" data-location="dhanori" data-bhk="2bhk 3bhk">
-          <div class="project-visual">
-            <img src="assets/images/luxury-interior.jpg" alt="Nyati Era Dhanori" loading="lazy">
-            <span class="project-status-badge">Under Construction</span>
-            <span class="project-location-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              Pune East &bull; <strong>Dhanori</strong>
-            </span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Nyati Era</h3>
-            <p class="project-specs">2 &amp; 3 Bed Futuristic Residences</p>
-            <div class="project-meta-row">
-              <div class="meta-col">
-                <span class="meta-label">Carpet Area</span>
-                <span class="meta-val">710 - 1,020 Sq. Ft.</span>
-              </div>
-              <div class="meta-col" style="text-align: right;">
-                <span class="meta-label">Starting Price</span>
-                <span class="meta-val text-bronze">&#8377; 68 Lacs*</span>
-              </div>
-            </div>
-            <div class="project-actions">
-              <button class="btn-card-details" onclick="openProjectModal('era')">View Details</button>
-              <button class="btn-card-inquire" onclick="openScheduleModal('Nyati Era - Dhanori')">Site Visit</button>
-            </div>
-          </div>
-        </article>
-
-        <!-- Project 6: Nyati Enthral (Kharadi Commercial) -->
-        <article class="project-card" data-category="commercial" data-location="kharadi" data-bhk="office">
-          <div class="project-visual">
-            <img src="assets/images/unitree.jpg" alt="Nyati Enthral Kharadi" loading="lazy">
-            <span class="project-status-badge">New Launch</span>
-            <span class="project-location-badge">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
-              East Pune &bull; <strong>Kharadi</strong>
-            </span>
-          </div>
-          <div class="project-content">
-            <h3 class="project-title">Nyati Enthral</h3>
-            <p class="project-specs">Next-Gen Corporate &amp; Retail Suites</p>
-            <div class="project-meta-row">
-              <div class="meta-col">
-                <span class="meta-label">Office Suites</span>
-                <span class="meta-val">650 - 8,000 Sq. Ft.</span>
-              </div>
-              <div class="meta-col" style="text-align: right;">
-                <span class="meta-label">Starting Price</span>
-                <span class="meta-val text-bronze">&#8377; 1.20 Cr*</span>
-              </div>
-            </div>
-            <div class="project-actions">
-              <button class="btn-card-details" onclick="openProjectModal('enthral')">View Details</button>
-              <button class="btn-card-inquire" onclick="openScheduleModal('Nyati Enthral - Kharadi')">Book Tour</button>
-            </div>
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- Conglomerate Verticals Section (5 Pillars) -->
-  <section class="section-verticals" id="verticals">
-    <div class="container">
-      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-        <span class="section-tag" style="color:var(--nyati-gold-light);">Conglomerate Excellence</span>
-        <h2 class="section-heading" style="color:#ffffff;">Beyond Real Estate: 5 Pillars of Leadership</h2>
-        <p style="color:#9ca3af; font-size:1.02rem;">
-          Over nearly three decades, Nyati Group has expanded across vital industries to construct India’s critical infrastructure, host world travelers, and safeguard holistic health.
+      <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+        <span class="section-tag">Featured Landmarks</span>
+        <h2 class="section-heading">Prestigious Landmark Projects</h2>
+        <p class="section-subtext" style="margin: 0 auto;">
+          A curated selection of our landmark developments across Pune. Full portfolio including floor plans, carpet sizes, and brochures is available on our dedicated projects page.
         </p>
       </div>
 
-      <div class="verticals-grid">
-        <!-- Vertical 1: Nyati EPC -->
-        <div class="vertical-card">
-          <div class="vertical-image">
-            <img src="assets/images/unitree.jpg" alt="Nyati EPC Engineering" loading="lazy">
+      <div class="projects-grid">
+        <!-- Project 1: SR Emerald -->
+        <div class="project-card">
+          <div class="project-visual">
+            <img src="assets/images/emerald.jpg" alt="SR Emerald Baner" loading="lazy">
+            <span class="project-status-badge">Ongoing • Baner</span>
           </div>
-          <div class="vertical-content">
-            <span class="vertical-badge">Nation-Building</span>
-            <h3 class="vertical-title">Nyati EPC Division</h3>
-            <p class="vertical-desc">
-              Engineering, Procurement &amp; Contracting executing high-scale landmark infrastructure across India—including the Udaipur Airport Terminal, Symbiosis International University Medical Campus, Ratnagiri Railway Station, and state police townships.
+          <div class="project-card-body">
+            <div class="project-location">Baner, West Pune</div>
+            <h3 class="project-title">SR Emerald</h3>
+            <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
+              2 &amp; 3 BHK Ultra-Luxury Residences with high-floor sky balconies and smart biometric living.
             </p>
-            <div class="vertical-highlight">
-              <span>National Scale</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 0.75rem; display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; color: var(--dark-blue);">
+              <span>MahaRERA: P52100030110</span>
+              <span>₹ 1.15 Cr*</span>
             </div>
           </div>
         </div>
 
-        <!-- Vertical 2: Hospitality -->
-        <div class="vertical-card">
-          <div class="vertical-image">
-            <img src="assets/images/corinthians.jpg" alt="The Corinthians Resort & Club" loading="lazy">
+        <!-- Project 2: SR Esteban II -->
+        <div class="project-card">
+          <div class="project-visual">
+            <img src="assets/images/esteban.jpg" alt="SR Esteban II Undri" loading="lazy">
+            <span class="project-status-badge">Ongoing • Undri</span>
           </div>
-          <div class="vertical-content">
-            <span class="vertical-badge">5-Star Luxury</span>
-            <h3 class="vertical-title">The Corinthians Resort</h3>
-            <p class="vertical-desc">
-              A 25-acre Egyptian-themed luxury oasis in South Pune offering world-class hospitality, fine international cuisines, Pune's premier microbrewery (The 1st Brewhouse), and sprawling destination wedding banquets.
+          <div class="project-card-body">
+            <div class="project-location">Undri, South Pune</div>
+            <h3 class="project-title">SR Esteban II</h3>
+            <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
+              2 &amp; 3 BHK Resort Residences centered around a lavish private lagoon pool and cabana retreat.
             </p>
-            <div class="vertical-highlight">
-              <span>25-Acre Sanctuary</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 0.75rem; display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; color: var(--dark-blue);">
+              <span>MahaRERA: P52100045890</span>
+              <span>₹ 78 Lacs*</span>
             </div>
           </div>
         </div>
 
-        <!-- Vertical 3: Healthcare & Wellbeing -->
-        <div class="vertical-card">
-          <div class="vertical-image">
-            <img src="assets/images/luxury-interior.jpg" alt="NL Healthcare and Swastik Wellbeing" loading="lazy">
+        <!-- Project 3: SR Unitree -->
+        <div class="project-card">
+          <div class="project-visual">
+            <img src="assets/images/unitree.jpg" alt="SR Unitree Yerwada" loading="lazy">
+            <span class="project-status-badge">Completed • Yerwada</span>
           </div>
-          <div class="vertical-content">
-            <span class="vertical-badge">Life &amp; Wellness</span>
-            <h3 class="vertical-title">NL Healthcare &amp; Swastik</h3>
-            <p class="vertical-desc">
-              Pioneering high-precision medical surgical equipment through NL Healthcare and holistic rejuvenation retreats through Swastik Wellbeing Sanctuary, nurturing mental, physical, and spiritual harmony.
+          <div class="project-card-body">
+            <div class="project-location">Yerwada, Central Pune</div>
+            <h3 class="project-title">SR Unitree</h3>
+            <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">
+              Grade-A Corporate IT Business Park housing multinational leaders and corporate headquarters.
             </p>
-            <div class="vertical-highlight">
-              <span>Holistic Health</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 0.75rem; display: flex; justify-content: space-between; font-size: 0.85rem; font-weight: 700; color: var(--dark-blue);">
+              <span>MahaRERA: P52100000388</span>
+              <span>Ready Possession</span>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- The Corinthians Resort & Club Spotlight Section -->
-  <section class="section-corinthians" id="corinthians">
-    <div class="corinthians-bg">
-      <img src="assets/images/corinthians.jpg" alt="The Corinthians Resort and Club">
-    </div>
-
-    <div class="container">
-      <div class="corinthians-card-box">
-        <div class="corinthians-tag">Hospitality Icon of Pune</div>
-        <h2 class="corinthians-title">The Corinthians Resort &amp; Club</h2>
-        <p class="corinthians-desc">
-          Immerse yourself in 25 acres of palatial Egyptian grandeur, lush Mediterranean flora, and warm hospitality. Winner of multiple awards for Best Luxury MICE &amp; Wedding Resort in Western India.
-        </p>
-
-        <div class="corinthians-stats-row">
-          <div>
-            <div class="c-stat-val">25</div>
-            <div class="c-stat-lbl">Acres of Greenery</div>
-          </div>
-          <div>
-            <div class="c-stat-val">1st</div>
-            <div class="c-stat-lbl">Brewhouse in Pune</div>
-          </div>
-          <div>
-            <div class="c-stat-val">5000+</div>
-            <div class="c-stat-lbl">Grand Banquet Capacity</div>
-          </div>
-        </div>
-
-        <div style="display: flex; gap: 1rem; align-items: center;">
-          <a href="#inquiry" class="btn-solid-luxury" style="background:var(--nyati-gold); color:#0d1117; border-color:var(--nyati-gold);">
-            Enquire For Events
-          </a>
-          <button class="btn-luxury-outline" onclick="openScheduleModal('The Corinthians Resort')">
-            Book Staycation
-          </button>
-        </div>
+      <div class="teaser-action-row">
+        <a href="projects.html" class="btn-teaser-view">
+          <span>Browse All Ongoing, Completed &amp; Upcoming Projects</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Core Values & Sustainability Section -->
-  <section class="section-values" id="values">
+  <!-- 4. PROJECT GALLERY TEASER SECTION -->
+  <section class="section-gallery" id="gallery">
     <div class="container">
-      <div style="text-align: center; max-width: 800px; margin: 0 auto;">
-        <span class="section-tag">Guiding Principles</span>
-        <h2 class="section-heading">Our 5 Pillars of Uncompromising Quality</h2>
-        <p style="color: #6b7280; font-size: 1rem;">
-          Every foundation poured, beam raised, and community nurtured by Nyati Group is anchored upon our foundational values.
+      <div class="gallery-header">
+        <span class="section-tag">Visual Media</span>
+        <h2 class="section-heading">Project Media Gallery</h2>
+        <p class="section-subtext" style="margin: 0 auto;">
+          High-definition photography, 4K walkthrough videos, and aerial drone vistas showcasing our architecture and lifestyle.
         </p>
       </div>
 
-      <div class="values-grid">
-        <div class="value-box">
-          <div class="value-num">01</div>
-          <h3 class="value-name">High Quality Construction</h3>
-          <p class="value-text">
-            Monolithic aluminium shuttering, computerized batching plants, and multi-tier third-party structural testing.
-          </p>
+      <div class="gallery-grid">
+        <!-- Media 1: Drone -->
+        <div class="gallery-item" onclick="window.location.href='gallery.html'">
+          <img src="assets/images/hero.jpg" alt="Aerial Drone View" loading="lazy">
+          <div class="gallery-item-overlay"></div>
+          <span class="gallery-badge">Drone View</span>
+          <div class="gallery-caption">
+            <h4>Skyline Twin Towers Masterplan</h4>
+            <p>Aerial Drone Perspective &bull; Pune City</p>
+          </div>
         </div>
 
-        <div class="value-box">
-          <div class="value-num">02</div>
-          <h3 class="value-name">In Sync with Nature</h3>
-          <p class="value-text">
-            IGBC Green building certifications, native tree afforestation, organic waste converters, and solar energy grids.
-          </p>
+        <!-- Media 2: Photo -->
+        <div class="gallery-item" onclick="window.location.href='gallery.html'">
+          <img src="assets/images/emerald.jpg" alt="Emerald Tower High-Rise" loading="lazy">
+          <div class="gallery-item-overlay"></div>
+          <span class="gallery-badge">Photo</span>
+          <div class="gallery-caption">
+            <h4>SR Emerald Sky Deck</h4>
+            <p>Architectural Facade Photography &bull; Baner</p>
+          </div>
         </div>
 
-        <div class="value-box">
-          <div class="value-num">03</div>
-          <h3 class="value-name">Professional Service</h3>
-          <p class="value-text">
-            Dedicated customer relations desk, transparent MahaRERA registrations, and digital milestone updates.
-          </p>
+        <!-- Media 3: Video -->
+        <div class="gallery-item" onclick="window.location.href='gallery.html'">
+          <img src="assets/images/esteban.jpg" alt="Lagoon Resort Walkthrough" loading="lazy">
+          <div class="gallery-item-overlay"></div>
+          <span class="gallery-badge">Video Tour</span>
+          <div class="gallery-caption">
+            <h4>Lagoon Pool &amp; Cabana Sanctuary</h4>
+            <p>Virtual Walkthrough &bull; Undri</p>
+          </div>
         </div>
+      </div>
 
-        <div class="value-box">
-          <div class="value-num">04</div>
-          <h3 class="value-name">Established Community</h3>
-          <p class="value-text">
-            Over 15,000 thriving homeowners united through festivals, sports leagues, and senior citizen wellness circles.
-          </p>
-        </div>
-
-        <div class="value-box">
-          <div class="value-num">05</div>
-          <h3 class="value-name">Absolute Transparency</h3>
-          <p class="value-text">
-            Zero hidden charges, clean land titles, and verified legal clearances across all 70+ delivered developments.
-          </p>
-        </div>
+      <div class="teaser-action-row">
+        <a href="gallery.html" class="btn-teaser-view">
+          <span>Open Full Media Gallery (Photos, Videos, Drone Views)</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Awards & Recognition Section -->
-  <section class="section-awards" id="awards">
+  <!-- 5. CERTIFICATIONS TEASER SECTION -->
+  <section class="section-certifications" id="certifications">
     <div class="container">
-      <div class="awards-grid">
-        <div class="award-item">
-          <svg class="award-trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
-          <span class="award-year">2026 Honor</span>
-          <h4 class="award-title">Stars of Deccan</h4>
-          <p class="award-org">Hurun India Awards</p>
-        </div>
-
-        <div class="award-item">
-          <svg class="award-trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
-          <span class="award-year">Winner</span>
-          <h4 class="award-title">Developer of the Year</h4>
-          <p class="award-org">Times Realty Icons Pune</p>
-        </div>
-
-        <div class="award-item">
-          <svg class="award-trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
-          <span class="award-year">Excellence</span>
-          <h4 class="award-title">Best Commercial Landmark</h4>
-          <p class="award-org">The Economic Times Realty</p>
-        </div>
-
-        <div class="award-item">
-          <svg class="award-trophy-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></svg>
-          <span class="award-year">Quality</span>
-          <h4 class="award-title">Construction Safety Award</h4>
-          <p class="award-org">CREDAI National Conclave</p>
-        </div>
+      <div class="certifications-header">
+        <span class="section-tag">Quality &amp; Compliance</span>
+        <h2 class="section-heading">Certified To Global Engineering Standards</h2>
+        <p class="section-subtext" style="margin: 0 auto;">
+          Strict international management accreditations, exceptional workplace safety, and recognized industry accolades.
+        </p>
       </div>
-    </div>
-  </section>
 
-  <!-- Interactive Site Visit & Inquiry Form Section -->
-  <section class="section-inquiry" id="inquiry">
-    <div class="container">
-      <div class="inquiry-grid">
-        <div class="inquiry-info-box">
-          <span class="section-tag" style="color:var(--nyati-gold-light);">Connect With Us</span>
-          <h2 class="section-heading" style="color:#ffffff;">Experience A Nyati Landmark In Person</h2>
-          <p style="color:#9ca3af; font-size:1.02rem; line-height:1.7;">
-            Whether you are seeking your dream luxury home in Baner or Bavdhan, Grade-A IT office space, or institutional EPC partnerships, our senior consultants are ready to assist you.
+      <div class="certifications-grid">
+        <!-- Cert 1: ISO -->
+        <div class="cert-card">
+          <div class="cert-badge-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="cert-title">Triple ISO Certified</h3>
+          <p class="cert-desc">
+            ISO 9001 (Quality), ISO 14001 (Environmental), and ISO 45001 (Health &amp; Safety) compliant operations audited by TÜV Rheinland.
           </p>
-
-          <ul class="contact-perks-list">
-            <li class="contact-perk-item">
-              <div class="perk-icon-circle">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
-              </div>
-              <div>
-                <strong>Complimentary Chauffeur Site Visit:</strong>
-                <p style="font-size:0.82rem; color:#9ca3af;">Convenient pick-and-drop service available across Pune.</p>
-              </div>
-            </li>
-
-            <li class="contact-perk-item">
-              <div class="perk-icon-circle">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 14 14"/></svg>
-              </div>
-              <div>
-                <strong>Special Armed Forces &amp; NRI Privilege Desk:</strong>
-                <p style="font-size:0.82rem; color:#9ca3af;">Dedicated documentation and preferential payment structures.</p>
-              </div>
-            </li>
-
-            <li class="contact-perk-item">
-              <div class="perk-icon-circle">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              </div>
-              <div>
-                <strong>Instant Digital Brochure &amp; Price Breakdown:</strong>
-                <p style="font-size:0.82rem; color:#9ca3af;">Directly sent to your WhatsApp and Email.</p>
-              </div>
-            </li>
-          </ul>
         </div>
 
-        <!-- Form Card -->
-        <div class="inquiry-form-card">
-          <h3 class="form-title">Schedule A Site Visit</h3>
-          <p class="form-subtitle">Fill out the details below to lock your preferred slot and receive project floor plans.</p>
+        <!-- Cert 2: Safety -->
+        <div class="cert-card">
+          <div class="cert-badge-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 12 11 14 15 10"/><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 class="cert-title">10.4M Safe Hours</h3>
+          <p class="cert-desc">
+            National Safety Council recognized achievement of over 10.4 million lost-time injury (LTI) free safe man-hours.
+          </p>
+        </div>
 
-          <form id="siteVisitForm" onsubmit="handleInquirySubmit(event)">
-            <div class="form-grid-2">
-              <div class="form-control-group">
-                <label for="leadName">Your Full Name *</label>
-                <input type="text" id="leadName" class="form-input" placeholder="e.g. Rahul Sharma" required>
-              </div>
-              <div class="form-control-group">
-                <label for="leadPhone">Contact Number *</label>
-                <input type="tel" id="leadPhone" class="form-input" placeholder="+91 98765 43210" pattern="[0-9+ ]{10,15}" required>
-              </div>
+        <!-- Cert 3: Awards -->
+        <div class="cert-card">
+          <div class="cert-badge-icon">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <h3 class="cert-title">Industry Honors</h3>
+          <p class="cert-desc">
+            Recognized by CREDAI National, Builders Association of India (BAI), and Construction Week India for engineering excellence.
+          </p>
+        </div>
+      </div>
+
+      <div class="teaser-action-row">
+        <a href="certifications.html" class="btn-teaser-view">
+          <span>View All ISO, Safety &amp; Industry Awards</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. CONTACT US TEASER SECTION -->
+  <section class="section-contact" id="contact">
+    <div class="container">
+      <div style="background: var(--off-white); border: 1.5px solid var(--border-subtle); border-radius: 6px; padding: clamp(2rem, 4vw, 3.5rem); box-shadow: var(--shadow-sm);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2.5rem; align-items: center;">
+          <div>
+            <span class="section-tag" style="margin-bottom: 0.75rem;">Corporate Desk</span>
+            <h2 class="section-heading" style="margin-bottom: 1rem;">Connect With SR Developer</h2>
+            <p class="section-subtext" style="margin-bottom: 1.5rem;">
+              Visit our corporate headquarters in Yerwada, Pune, or speak directly with our senior relationship managers for project brochures and private site visits.
+            </p>
+            <div style="display: flex; flex-direction: column; gap: 0.75rem; font-size: 0.95rem; color: var(--dark-blue); font-weight: 600;">
+              <div><strong>Headquarters:</strong> 6th Floor, SR Unitree, Yerwada, Pune - 411006</div>
+              <div><strong>Boardline:</strong> +91 20 6686 3333 &bull; +91 98220 00000</div>
+              <div><strong>Email:</strong> corporate@srdeveloper.com</div>
+            </div>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+            <div style="background: var(--pure-white); padding: 1.5rem; border-radius: 6px; border: 1px solid var(--border-subtle);">
+              <h4 style="font-size: 1.05rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 0.4rem;">Direct WhatsApp Concierge</h4>
+              <p style="font-size: 0.88rem; color: var(--text-body); margin-bottom: 1rem;">Instant brochures, pricing matrices, and site visit confirmation via WhatsApp.</p>
+              <a href="https://wa.me/919822000000?text=Hello%20SR%20Developer,%20I%20would%20like%20to%20enquire%20about%20your%20projects" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.6rem; background: #25D366; color: #FFFFFF; padding: 0.75rem 1.4rem; border-radius: 4px; font-weight: 700; font-size: 0.85rem; text-transform: uppercase;">
+                Chat on WhatsApp Now
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
             </div>
 
-            <div class="form-grid-2">
-              <div class="form-control-group">
-                <label for="leadEmail">Email Address *</label>
-                <input type="email" id="leadEmail" class="form-input" placeholder="name@example.com" required>
-              </div>
-              <div class="form-control-group">
-                <label for="leadProject">Select Project *</label>
-                <select id="leadProject" class="form-input" style="background:#0d1117;" required>
-                  <option value="">Select a project</option>
-                  <option value="Nyati Emerald - Baner">Nyati Emerald (Baner)</option>
-                  <option value="Nyati Esteban II - Undri">Nyati Esteban II (Undri)</option>
-                  <option value="Nyati Equinox - Bavdhan">Nyati Equinox (Bavdhan)</option>
-                  <option value="Nyati Era - Dhanori">Nyati Era (Dhanori)</option>
-                  <option value="Nyati Unitree - Yerwada">Nyati Unitree Commercial (Yerwada)</option>
-                  <option value="Nyati Enthral - Kharadi">Nyati Enthral Commercial (Kharadi)</option>
-                  <option value="The Corinthians Resort">The Corinthians Resort &amp; Club</option>
-                  <option value="Nyati EPC Advisory">Nyati EPC Advisory</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-grid-2">
-              <div class="form-control-group">
-                <label for="leadDate">Preferred Date</label>
-                <input type="date" id="leadDate" class="form-input">
-              </div>
-              <div class="form-control-group">
-                <label for="leadTime">Preferred Time</label>
-                <select id="leadTime" class="form-input" style="background:#0d1117;">
-                  <option value="Morning (10:00 AM - 01:00 PM)">Morning (10:00 AM - 01:00 PM)</option>
-                  <option value="Afternoon (01:00 PM - 04:00 PM)">Afternoon (01:00 PM - 04:00 PM)</option>
-                  <option value="Evening (04:00 PM - 07:00 PM)">Evening (04:00 PM - 07:00 PM)</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-checkbox-row">
-              <input type="checkbox" id="leadWhatsapp" checked>
-              <label for="leadWhatsapp">Receive instant confirmation, RERA details, and floor plan PDF on WhatsApp</label>
-            </div>
-
-            <button type="submit" class="btn-form-submit">
-              Confirm Site Visit &amp; Send Brochure
-            </button>
-          </form>
+            <a href="contact.html" class="btn-teaser-view" style="width: 100%; justify-content: center;">
+              <span>Go to Dedicated Contact &amp; Office Map Page</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Comprehensive Footer -->
+  <!-- Comprehensive Light Footer -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer-top-grid">
@@ -794,12 +569,12 @@
               </svg>
             </div>
             <div class="logo-text-block">
-              <span class="logo-brand-name">NYATI</span>
+              <span class="logo-brand-name">SR DEVELOPER</span>
               <span class="logo-tagline">Creating Landmarks Since 1997</span>
             </div>
           </div>
           <p>
-            Established in 1997, Nyati Group stands amongst Western India's most distinguished conglomerates with excellence across Luxury Real Estate, Commercial Parks, EPC Infrastructure, 5-Star Hospitality, and Healthcare.
+            Established in 1997, SR Developer is one of Western India's most distinguished real estate and infrastructure conglomerates, delivering over 40 million sq. ft. of residential towers, Grade-A IT parks, and nationwide EPC contracts.
           </p>
           <div class="social-links">
             <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
@@ -818,53 +593,49 @@
         </div>
 
         <div>
-          <h4 class="footer-heading">Residential Enclaves</h4>
+          <h4 class="footer-heading">About &amp; Services</h4>
           <ul class="footer-links-list">
-            <li><a href="#projects" onclick="filterProjectsByCategory('residential')">Nyati Emerald (Baner)</a></li>
-            <li><a href="#projects" onclick="filterProjectsByCategory('residential')">Nyati Esteban II (Undri)</a></li>
-            <li><a href="#projects" onclick="filterProjectsByCategory('residential')">Nyati Equinox (Bavdhan)</a></li>
-            <li><a href="#projects" onclick="filterProjectsByCategory('residential')">Nyati Era (Dhanori)</a></li>
-            <li><a href="#projects" onclick="filterProjectsByCategory('luxury')">Nyati Evania (Sadashiv Peth)</a></li>
-            <li><a href="#projects" onclick="filterProjectsByCategory('luxury')">The Luxury Collection</a></li>
+            <li><a href="about.html">Corporate History</a></li>
+            <li><a href="about.html">Vision &amp; Mission</a></li>
+            <li><a href="about.html">Executive Leadership</a></li>
+            <li><a href="services.html">Construction Engineering</a></li>
+            <li><a href="services.html">Infrastructure &amp; EPC</a></li>
+            <li><a href="services.html">Urban Development</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-heading">Business Verticals</h4>
+          <h4 class="footer-heading">Projects &amp; Gallery</h4>
           <ul class="footer-links-list">
-            <li><a href="#projects" onclick="filterProjectsByCategory('commercial')">Nyati Unitree (Yerwada)</a></li>
-            <li><a href="#projects" onclick="filterProjectsByCategory('commercial')">Nyati Enthral (Kharadi)</a></li>
-            <li><a href="#verticals">Nyati EPC Infrastructure</a></li>
-            <li><a href="#corinthians">The Corinthians Resort &amp; Club</a></li>
-            <li><a href="#verticals">NL Healthcare Innovations</a></li>
-            <li><a href="#verticals">Swastik Wellbeing Retreat</a></li>
+            <li><a href="projects.html">SR Emerald (Baner)</a></li>
+            <li><a href="projects.html">SR Esteban II (Undri)</a></li>
+            <li><a href="projects.html">SR Equinox (Bavdhan)</a></li>
+            <li><a href="projects.html">SR Unitree (Yerwada)</a></li>
+            <li><a href="projects.html">SR Era (Dhanori)</a></li>
+            <li><a href="gallery.html">Photos &amp; Drone Views</a></li>
           </ul>
         </div>
 
         <div>
-          <h4 class="footer-heading">Global Offices</h4>
-          <div class="office-info">
-            <span class="office-city">PUNE HEADQUARTERS</span>
-            6th Floor, Nyati Unitree, Nagar Road, Yerwada, Pune - 411006
-          </div>
-          <div class="office-info">
-            <span class="office-city">MUMBAI OFFICE</span>
-            804, Landmark Platinum, SV Road &amp; 34th Road, Khar (W), Mumbai - 400050
-          </div>
-          <div class="office-info">
-            <span class="office-city">DUBAI OFFICE</span>
-            Building 06, Office 405, Bay Square, Business Bay, Dubai, UAE
-          </div>
+          <h4 class="footer-heading">Certifications &amp; Contact</h4>
+          <ul class="footer-links-list">
+            <li><a href="certifications.html">ISO 9001:2015 Quality</a></li>
+            <li><a href="certifications.html">ISO 14001:2015 Green</a></li>
+            <li><a href="certifications.html">ISO 45001 Safety Standards</a></li>
+            <li><a href="contact.html">Schedule Site Visit</a></li>
+            <li><a href="contact.html">Corporate Office Map</a></li>
+            <li><a href="https://wa.me/919822000000" target="_blank">WhatsApp Direct Desk</a></li>
+          </ul>
         </div>
       </div>
 
       <div class="footer-rera-note">
-        <strong>MahaRERA &amp; Statutory Disclaimer:</strong> The plans, specifications, images, and other details herein are only indicative and the developer reserves the right to change any or all of these in the interest of the development as per applicable MahaRERA approvals. Nyati Emerald MahaRERA Reg No: P52100030110; Nyati Esteban II MahaRERA Reg No: P52100045890; Nyati Equinox MahaRERA Reg No: P52100031920. Available at website: maharera.mahaonline.gov.in.
+        <strong>MahaRERA &amp; Statutory Disclaimer:</strong> The plans, specifications, visual images, and other particulars herein are indicative and the developer reserves the right to make modifications as per applicable statutory MahaRERA sanctions. SR Emerald MahaRERA Reg No: P52100030110; SR Esteban II MahaRERA Reg No: P52100045890; SR Equinox MahaRERA Reg No: P52100031920. Available at official website: maharera.mahaonline.gov.in.
       </div>
 
       <div class="footer-bottom-row">
         <div>
-          &copy; 2026 Nyati Group. All Rights Reserved. Pune, Maharashtra, India.
+          &copy; 2026 SR Developer. All Rights Reserved. Pune, Maharashtra, India.
         </div>
         <div style="display: flex; gap: 1.5rem;">
           <a href="#">Privacy Policy</a>
@@ -876,7 +647,7 @@
     </div>
   </footer>
 
-  <!-- Project Details Modal -->
+  <!-- Interactive Project Details Modal -->
   <div class="modal-backdrop" id="projectModalBackdrop">
     <div class="project-modal-container">
       <button class="modal-close-btn" onclick="closeProjectModal()" aria-label="Close Modal">
@@ -887,8 +658,8 @@
         <img src="assets/images/emerald.jpg" alt="Project Banner" id="modalHeroImg">
         <div class="modal-header-overlay">
           <span class="project-status-badge" style="width: fit-content;" id="modalStatusBadge">Ongoing Project</span>
-          <h2 class="font-serif" style="font-size: 2.2rem; margin-top: 0.5rem;" id="modalTitle">Nyati Emerald</h2>
-          <p style="color: var(--nyati-gold-light); font-size: 1rem;" id="modalSubtitle">2 &amp; 3 Bed Residences &bull; Baner, Pune West</p>
+          <h2 class="font-serif" style="font-size: 2.2rem; margin-top: 0.5rem;" id="modalTitle">SR Emerald</h2>
+          <p style="color: var(--light-sky-blue); font-size: 1rem;" id="modalSubtitle">2 &amp; 3 Bed Residences &bull; Baner, Pune West</p>
         </div>
       </div>
 
@@ -901,7 +672,7 @@
           </div>
           <div class="modal-spec-item">
             <span class="label">Carpet Area</span>
-            <div class="value" id="modalSpecCarpet">840 - 1320 Sq. Ft.</div>
+            <div class="value" id="modalSpecCarpet">840 - 1,320 Sq. Ft.</div>
           </div>
           <div class="modal-spec-item">
             <span class="label">Starting Price</span>
@@ -913,70 +684,16 @@
           </div>
         </div>
 
-        <h4 class="font-serif" style="font-size: 1.3rem; margin-bottom: 0.8rem; color:#ffffff;">Architectural Overview</h4>
-        <p style="color:#d1d5db; line-height:1.7; margin-bottom: 2rem;" id="modalOverviewText">
-          Engineered for supreme comfort and panoramic views, this development features state-of-the-art seismic compliance, aluminium formwork, and sun-lit cross-ventilated spaces.
+        <h4 class="font-serif" style="font-size: 1.3rem; margin-bottom: 0.8rem; color: var(--dark-blue);">Architectural Overview</h4>
+        <p style="color: var(--light-gray-text); line-height: 1.7; margin-bottom: 2rem;" id="modalOverviewText">
+          Engineered for supreme comfort and panoramic hill views, this development features state-of-the-art seismic compliance, aluminium formwork, and sun-lit cross-ventilated spaces.
         </p>
 
-        <!-- Interactive Floor Plan Switcher -->
-        <h4 class="font-serif" style="font-size: 1.3rem; margin-bottom: 0.8rem; color:#ffffff;">Interactive Floor Plan Layout</h4>
-        <div class="floorplan-toggle-tabs">
-          <button class="fp-tab-btn active" onclick="switchFloorplan('2bhk')">2 BHK Suite</button>
-          <button class="fp-tab-btn" onclick="switchFloorplan('3bhk')">3 BHK Grand</button>
-          <button class="fp-tab-btn" onclick="switchFloorplan('penthouse')">Signature Penthouse</button>
-        </div>
-
-        <div class="floorplan-diagram-box">
-          <svg class="floorplan-svg" viewBox="0 0 500 300" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="10" y="10" width="480" height="280" stroke="#c5a880" stroke-width="2" fill="rgba(197, 168, 128, 0.04)" rx="4"/>
-            <!-- Living Room -->
-            <rect x="30" y="30" width="220" height="150" stroke="#c5a880" stroke-width="1.5" stroke-dasharray="4 2"/>
-            <text x="75" y="105" fill="#dfcaa7" font-size="12" font-family="Plus Jakarta Sans">Living &amp; Dining (18' x 13')</text>
-            <!-- Balcony -->
-            <rect x="30" y="195" width="220" height="75" stroke="#dfcaa7" stroke-width="1.5"/>
-            <text x="85" y="240" fill="#c5a880" font-size="11" font-family="Plus Jakarta Sans">Sun Deck (14' x 6')</text>
-            <!-- Master Bedroom -->
-            <rect x="270" y="30" width="200" height="140" stroke="#c5a880" stroke-width="1.5"/>
-            <text x="300" y="100" fill="#dfcaa7" font-size="12" font-family="Plus Jakarta Sans">Master Suite (14' x 12')</text>
-            <!-- Kitchen & Utility -->
-            <rect x="270" y="185" width="200" height="85" stroke="#c5a880" stroke-width="1.5"/>
-            <text x="315" y="235" fill="#dfcaa7" font-size="11" font-family="Plus Jakarta Sans">Kitchen &amp; Dry Balcony</text>
-          </svg>
-          <p style="font-size: 0.8rem; color: #9ca3af; margin-top: 0.8rem;" id="floorplanLabel">
-            Showing Master Layout &bull; 840 Sq. Ft. Optimal Space Utilization
-          </p>
-        </div>
-
-        <!-- Amenities Chips -->
-        <h4 class="font-serif" style="font-size: 1.3rem; margin-bottom: 0.8rem; color:#ffffff;">Clubhouse &amp; Lifestyle Amenities</h4>
-        <div class="amenities-badges-wrap">
-          <span class="amenity-chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m4.93 4.93 4.24 4.24"/><path d="m14.83 9.17 4.24-4.24"/><path d="m14.83 14.83 4.24 4.24"/><path d="m9.17 14.83-4.24 4.24"/></svg>
-            Infinity Lap Pool
-          </span>
-          <span class="amenity-chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            3-Tier Biometric Security
-          </span>
-          <span class="amenity-chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M7 7h10"/><path d="M7 12h10"/><path d="M7 17h10"/></svg>
-            15,000 Sq.Ft. Clubhouse
-          </span>
-          <span class="amenity-chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            EV Charging Stations
-          </span>
-          <span class="amenity-chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-            Stargazing Sky Lounge
-          </span>
-        </div>
-
         <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">
-          <button class="btn-solid-luxury" style="flex: 1; text-align: center; justify-content: center;" id="modalVisitBtn">
+          <button class="btn-primary-blue" style="flex: 1; text-align: center; justify-content: center;" id="modalVisitBtn">
             Schedule Private Site Visit
           </button>
-          <button class="btn-luxury-outline" style="flex: 1; text-align: center; justify-content: center;" onclick="downloadBrochureSimulated()">
+          <button class="btn-outline-blue" style="flex: 1; text-align: center; justify-content: center;" onclick="downloadBrochureSimulated()">
             Download E-Brochure PDF
           </button>
         </div>
@@ -988,8 +705,8 @@
   <div class="toast-notification" id="toastNotification">
     <svg class="toast-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
     <div>
-      <h5 style="font-size: 0.95rem; font-weight: 700; color: #ffffff;" id="toastTitle">Request Confirmed!</h5>
-      <p style="font-size: 0.82rem; color: #d1d5db;" id="toastMsg">Our representative has sent project details to your WhatsApp.</p>
+      <h5 style="font-size: 0.95rem; font-weight: 700; color: var(--dark-blue);" id="toastTitle">Request Confirmed!</h5>
+      <p style="font-size: 0.82rem; color: var(--light-gray-text);" id="toastMsg">Our representative has sent project details to your WhatsApp.</p>
     </div>
   </div>
 

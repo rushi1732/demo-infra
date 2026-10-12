@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Certifications &amp; Accolades | ISO, Awards &amp; Safety | SR Developer</title>
+  <meta name="description" content="View SR Developer's statutory accreditations: Triple ISO certifications, CREDAI &amp; BAI excellence awards, and over 10.4 million safe LTI-free construction hours.">
+  <link rel="canonical" href="https://srdeveloper.com/certifications.html">
+
+  <!-- Google Fonts: Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Dynamic Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- 2-Second Sub-Page Intro Animation Curtain -->
+  <div class="intro-curtain" id="introCurtain" data-intro-title="CERTIFICATIONS" data-intro-subtitle="ISO • AWARDS • SAFETY CERTIFICATES">
+    <div class="intro-container">
+      <div class="intro-text-step" id="introStep1"></div>
+    </div>
+  </div>
+
+  <!-- Transparent-to-Solid Sticky Header -->
+  <header class="main-header" id="mainHeader">
+    <div class="container header-inner">
+      <a href="index.html?from=subpage" class="brand-logo" aria-label="SR Developer Homepage">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2" />
+            <polyline points="2 17 12 22 22 17" />
+            <polyline points="2 12 12 17 22 12" />
+          </svg>
+        </div>
+        <div class="logo-text-block">
+          <span class="logo-brand-name">SR DEVELOPER</span>
+          <span class="logo-tagline">Creating Landmarks Since 1997</span>
+        </div>
+      </a>
+
+      <!-- 3-Line Hamburger Menu Toggle Button (Right Corner) -->
+      <div class="header-actions">
+        <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Interactive Mega Menu Overlay -->
+  <div class="mega-menu-overlay" id="megaMenuOverlay">
+    <button class="mega-menu-close-btn" onclick="closeMegaMenu()" aria-label="Close Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    <div class="mega-menu-left">
+      <div>
+        <p class="mega-menu-header-tag">SR Developer Conglomerate Navigation</p>
+        <ul class="mega-menu-links">
+          <li class="mega-menu-item" data-preview="assets/images/hero.jpg" data-caption-title="Home Page" data-caption-desc="Return to the executive homepage showcase.">
+            <a href="index.html?from=subpage">
+              <div class="menu-main-row">
+                <span class="menu-num">00</span>
+                <span class="menu-title">Home</span>
+              </div>
+              <span class="menu-subitems">Main Overview &amp; Interactive Showcase</span>
+            </a>
+          </li>
+          <li class="mega-menu-item" data-preview="assets/images/hero.jpg" data-caption-title="About SR Developer" data-caption-desc="Founded in 1997. Over 29 years of architectural distinction, ethical governance, and nation-building.">
+            <a href="about.html">
+              <div class="menu-main-row">
+                <span class="menu-num">01</span>
+                <span class="menu-title">About</span>
+              </div>
+              <span class="menu-subitems">History, Vision, Mission, Leadership</span>
+            </a>
+          </li>
+          <li class="mega-menu-item" data-preview="assets/images/unitree.jpg" data-caption-title="Our Core Business Verticals" data-caption-desc="End-to-end engineering excellence across high-rise residential construction, civil infrastructure EPC, and integrated master developments.">
+            <a href="services.html">
+              <div class="menu-main-row">
+                <span class="menu-num">02</span>
+                <span class="menu-title">Our Services</span>
+              </div>
+              <span class="menu-subitems">Construction, Infrastructure, Development</span>
+            </a>
+          </li>
+          <li class="mega-menu-item" data-preview="assets/images/emerald.jpg" data-caption-title="Prestigious Landmark Projects" data-caption-desc="Explore ultra-luxury gated residences, commercial IT business towers, and mixed-use urban landmarks.">
+            <a href="projects.html">
+              <div class="menu-main-row">
+                <span class="menu-num">03</span>
+                <span class="menu-title">Projects</span>
+              </div>
+              <span class="menu-subitems">Ongoing, Completed, Upcoming Projects</span>
+            </a>
+          </li>
+          <li class="mega-menu-item" data-preview="assets/images/esteban.jpg" data-caption-title="Project Visual Gallery" data-caption-desc="High-definition architectural photography, cinematic walkthrough videos, and aerial drone site perspectives.">
+            <a href="gallery.html">
+              <div class="menu-main-row">
+                <span class="menu-num">04</span>
+                <span class="menu-title">Project Gallery</span>
+              </div>
+              <span class="menu-subitems">Photos, Videos, Drone Views</span>
+            </a>
+          </li>
+          <li class="mega-menu-item active" data-preview="assets/images/luxury-interior.jpg" data-caption-title="Certifications &amp; Accolades" data-caption-desc="Triple ISO quality compliance, CREDAI &amp; BAI awards, and over 10 million safe LTI-free work hours.">
+            <a href="certifications.html">
+              <div class="menu-main-row">
+                <span class="menu-num">05</span>
+                <span class="menu-title">Certifications</span>
+              </div>
+              <span class="menu-subitems">ISO, Awards, Safety Certificates</span>
+            </a>
+          </li>
+          <li class="mega-menu-item" data-preview="assets/images/corinthians.jpg" data-caption-title="Contact &amp; Connect" data-caption-desc="Institutional enquiry desk, corporate office map in Yerwada, and direct WhatsApp concierge assistance.">
+            <a href="contact.html">
+              <div class="menu-main-row">
+                <span class="menu-num">06</span>
+                <span class="menu-title">Contact Us</span>
+              </div>
+              <span class="menu-subitems">Enquiry Form, Map, WhatsApp</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mega-menu-footer">
+        <div>
+          <strong style="color: var(--dark-blue);">Headquarters:</strong> 6th Floor, SR Unitree, Yerwada, Pune - 411006
+        </div>
+        <div>
+          <a href="tel:+912066863333" style="color: var(--dark-blue); font-weight: 700;">+91 20 6686 3333</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mega-menu-right">
+      <img src="assets/images/luxury-interior.jpg" alt="Preview Showcase" class="mega-preview-bg" id="megaPreviewImg">
+      <div class="mega-preview-overlay"></div>
+      <div class="mega-preview-caption">
+        <h4 id="megaCaptionTitle">Certifications</h4>
+        <p id="megaCaptionDesc">Triple ISO, National Safety Council &amp; CREDAI Industry Accolades.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sub-Page Hero Banner with Blurred Background & Large Title -->
+  <section class="subpage-hero">
+    <div class="subpage-hero-bg" style="background-image: url('assets/images/luxury-interior.jpg');"></div>
+    <div class="subpage-hero-overlay"></div>
+    <div class="subpage-hero-content">
+      <span class="subpage-hero-tag">Audited Credentials</span>
+      <h1 class="subpage-hero-title">Certifications &amp; Accolades</h1>
+      <p class="subpage-hero-desc">Triple ISO Certifications, National Safety Milestones, and Industry Honours Validating Our 29-Year Construction Governance.</p>
+      <div class="subpage-scroll-cue">
+        <span>Scroll Down For Detailed Information</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb Navigation Bar -->
+  <nav class="breadcrumb-strip" style="background: var(--off-white); border-bottom: 1px solid var(--border-subtle); padding: 0.85rem 0;" aria-label="Breadcrumb">
+    <div class="container" style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; font-weight: 600; color: var(--dark-blue);">
+      <a href="index.html?from=subpage" style="color: var(--dark-blue); opacity: 0.8;">Home</a>
+      <span>/</span>
+      <span style="color: var(--dark-blue); font-weight: 700;">Certifications &amp; Awards</span>
+    </div>
+  </nav>
+
+  <!-- ISO Accreditations Section -->
+  <section style="padding: 5rem 0; background: var(--pure-white);">
+    <div class="container">
+      <div style="max-width: 850px; margin-bottom: 3.5rem;">
+        <span class="section-tag">Quality Accreditations</span>
+        <h2 class="section-heading">Triple ISO Certified Engineering</h2>
+        <p class="section-subtext">Our management, site engineering, and environmental systems are independently audited and certified by leading global compliance registrars.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+        
+        <!-- ISO 9001 -->
+        <div style="background: var(--off-white); padding: 2.5rem; border-radius: 6px; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+          <div style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 800; color: var(--dark-blue); margin-bottom: 0.5rem;">ISO 9001:2015</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 0.75rem;">Quality Management System</h3>
+          <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.25rem;">
+            Certified across all residential and EPC infrastructure construction phases. Rigorous multi-tier vendor inspection, raw material testing, and calibrated formwork deployment.
+          </p>
+          <div style="font-size: 0.82rem; font-weight: 700; color: var(--dark-blue); background: var(--light-sky-blue); padding: 0.4rem 0.85rem; border-radius: 4px; display: inline-block;">
+            Auditing Registrar: TÜV Rheinland
+          </div>
+        </div>
+
+        <!-- ISO 14001 -->
+        <div style="background: var(--off-white); padding: 2.5rem; border-radius: 6px; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+          <div style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 800; color: var(--dark-blue); margin-bottom: 0.5rem;">ISO 14001:2015</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 0.75rem;">Environmental Management</h3>
+          <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.25rem;">
+            Commitment to green building practices, zero site dust dispersion, 100% construction waste recycling, and solar-assisted site auxiliary power management.
+          </p>
+          <div style="font-size: 0.82rem; font-weight: 700; color: var(--dark-blue); background: var(--light-sky-blue); padding: 0.4rem 0.85rem; border-radius: 4px; display: inline-block;">
+            Certification ID: ENV-IND-2024
+          </div>
+        </div>
+
+        <!-- ISO 45001 -->
+        <div style="background: var(--off-white); padding: 2.5rem; border-radius: 6px; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+          <div style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 800; color: var(--dark-blue); margin-bottom: 0.5rem;">ISO 45001:2018</div>
+          <h3 style="font-size: 1.15rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 0.75rem;">Occupational Health &amp; Safety</h3>
+          <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.25rem;">
+            Global benchmark for on-site worker welfare, biometric gate access, mandatory PPE adherence, daily safety toolboxes, and zero-compromise scaffolding integrity.
+          </p>
+          <div style="font-size: 0.82rem; font-weight: 700; color: var(--dark-blue); background: var(--light-sky-blue); padding: 0.4rem 0.85rem; border-radius: 4px; display: inline-block;">
+            Safety Rating: Grade A+ Compliant
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Industry Awards & Safety Strip -->
+  <section style="padding: 5rem 0; background: var(--off-white); border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="max-width: 850px; margin-bottom: 3.5rem;">
+        <span class="section-tag">Industry Recognition</span>
+        <h2 class="section-heading">Awards &amp; Safety Milestones</h2>
+        <p class="section-subtext">Honoring our contributions to architectural innovation, construction technology, and responsible workplace governance.</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+        
+        <div style="background: var(--pure-white); padding: 2rem; border-radius: 6px; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+          <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.15em; margin-bottom: 0.4rem;">CREDAI Real Estate Awards</div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 0.75rem;">Best Ultra-Luxury Project</h4>
+          <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6;">Conferred for architectural design, German MIVAN engineering, and resident club planning at SR Emerald.</p>
+        </div>
+
+        <div style="background: var(--pure-white); padding: 2rem; border-radius: 6px; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+          <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.15em; margin-bottom: 0.4rem;">Builders Association of India (BAI)</div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 0.75rem;">Excellence in Formwork Execution</h4>
+          <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6;">Awarded for rapid, defect-free monolithic aluminum shuttering cycles across 40-storey residential towers.</p>
+        </div>
+
+        <div style="background: var(--pure-white); padding: 2rem; border-radius: 6px; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+          <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.15em; margin-bottom: 0.4rem;">Construction Week India</div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 0.75rem;">Commercial Project of the Year</h4>
+          <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6;">Recognizing SR Unitree IT Business Park for LEED Gold sustainability, double curtain glazing, and seismic safety.</p>
+        </div>
+
+        <div style="background: var(--pure-white); padding: 2rem; border-radius: 6px; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+          <div style="font-size: 0.8rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.15em; margin-bottom: 0.4rem;">National Safety Council</div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.3rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 0.75rem;">10.4M LTI-Free Safe Hours</h4>
+          <p style="color: var(--text-body); font-size: 0.9rem; line-height: 1.6;">Continuous milestone achieved across all ongoing project sites with zero lost-time workplace injuries.</p>
+        </div>
+
+      </div>
+
+      <!-- Action Row -->
+      <div class="teaser-action-row" style="margin-top: 4rem;">
+        <a href="index.html?from=subpage" class="btn-teaser-view">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+          Back To Home Page
+        </a>
+        <a href="contact.html" class="btn-teaser-view" style="margin-left: 1rem; background: var(--pure-white); color: var(--dark-blue); border-color: var(--soft-sky-blue);">
+          Contact Corporate Office
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corporate Footer -->
+  <footer style="background: var(--dark-blue); color: var(--pure-white); padding: 4.5rem 0 2.5rem 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2.5rem; margin-bottom: 3.5rem;">
+        <div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 1rem; color: var(--pure-white);">SR DEVELOPER</h4>
+          <p style="color: var(--light-sky-blue); font-size: 0.9rem; line-height: 1.7;">
+            Western India's premier infrastructure and luxury residential conglomerate since 1997. Over 40 million sq. ft. of executed landmarks.
+          </p>
+        </div>
+        <div>
+          <h5 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--soft-sky-blue); margin-bottom: 1rem;">Direct Navigation</h5>
+          <ul style="list-style: none; padding: 0; line-height: 2.2; font-size: 0.9rem;">
+            <li><a href="index.html?from=subpage" style="color: var(--pure-white);">Home</a></li>
+            <li><a href="about.html" style="color: var(--pure-white);">About Us</a></li>
+            <li><a href="services.html" style="color: var(--pure-white);">Our Services</a></li>
+            <li><a href="projects.html" style="color: var(--pure-white);">Landmark Projects</a></li>
+            <li><a href="gallery.html" style="color: var(--pure-white);">Project Gallery</a></li>
+            <li><a href="certifications.html" style="color: var(--pure-white); font-weight: 700;">Certifications</a></li>
+            <li><a href="contact.html" style="color: var(--pure-white);">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--soft-sky-blue); margin-bottom: 1rem;">Corporate Office</h5>
+          <p style="color: var(--light-sky-blue); font-size: 0.9rem; line-height: 1.7;">
+            6th Floor, SR Unitree,<br>
+            Pune-Ahmednagar Road, Yerwada,<br>
+            Pune, Maharashtra - 411006
+          </p>
+          <p style="margin-top: 1rem; color: var(--pure-white); font-weight: 700;">
+            Tel: +91 20 6686 3333
+          </p>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: var(--light-sky-blue);">
+        <div>&copy; 1997-2026 SR Developer Conglomerate. All Rights Reserved.</div>
+        <div>MahaRERA Statutory Compliance &bull; Escrow Governed</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,12 +1,12 @@
 /**
- * NYATI GROUP - Official Website Experience Controller
+ * SR DEVELOPER - Official Website Experience Controller
  * Legacy Est. 1997 | Pune, India
  */
 
 // Project Database for Interactive Modals
 const projectDatabase = {
   emerald: {
-    title: 'Nyati Emerald',
+    title: 'SR Emerald',
     subtitle: '2 & 3 Bed Ultra-Luxury Residences • Baner, West Pune',
     image: 'assets/images/emerald.jpg',
     status: 'New Launch Phase',
@@ -14,7 +14,7 @@ const projectDatabase = {
     carpet: '840 - 1,320 Sq. Ft.',
     price: '₹ 1.15 Cr*',
     rera: 'P52100030110',
-    overview: 'Perched in the prestigious Baner IT and lifestyle hub, Nyati Emerald combines cutting-edge German formwork structural engineering with sprawling high-floor balconies. Overlooking panoramic hillocks and the city skyline, it offers smart biometric home automation and private club amenities.',
+    overview: 'Perched in the prestigious Baner IT and lifestyle hub, SR Emerald combines cutting-edge German formwork structural engineering with sprawling high-floor balconies. Overlooking panoramic hillocks and the city skyline, it offers smart biometric home automation and private club amenities.',
     floorplans: {
       '2bhk': { label: '2 BHK Grand Suite • 840 Sq. Ft. Carpet Area', rooms: "Living (18'x13'), Master (14'x12'), Bedroom 2 (12'x11')" },
       '3bhk': { label: '3 BHK Royal Residence • 1,150 Sq. Ft. Carpet Area', rooms: "Living (21'x14'), Master (16'x13'), 2 Suites + Sundeck" },
@@ -22,7 +22,7 @@ const projectDatabase = {
     }
   },
   esteban: {
-    title: 'Nyati Esteban II',
+    title: 'SR Esteban II',
     subtitle: '2 & 3 Bed Resort-Themed Residences • Undri, South Pune',
     image: 'assets/images/esteban.jpg',
     status: 'Under Construction',
@@ -30,7 +30,7 @@ const projectDatabase = {
     carpet: '760 - 1,180 Sq. Ft.',
     price: '₹ 78 Lacs*',
     rera: 'P52100045890',
-    overview: 'Located in the verdant, peaceful corridor of Undri in South Pune, Nyati Esteban II is designed around a lavish central lagoon pool and cabana retreat. Enjoy clean air, close proximity to renowned schools like Bishop’s and Sanskriti, and the Corinthians Club.',
+    overview: 'Located in the verdant, peaceful corridor of Undri in South Pune, SR Esteban II is designed around a lavish central lagoon pool and cabana retreat. Enjoy clean air, close proximity to renowned schools like Bishop’s and Sanskriti, and the Corinthians Club.',
     floorplans: {
       '2bhk': { label: '2 BHK Serene Comfort • 760 Sq. Ft. Carpet Area', rooms: "Living (17'x12'), Master (13'x11'), Guest Suite" },
       '3bhk': { label: '3 BHK Resort Horizon • 1,040 Sq. Ft. Carpet Area', rooms: "Living (20'x14'), 3 Bathrooms, Extended Veranda" },
@@ -38,7 +38,7 @@ const projectDatabase = {
     }
   },
   equinox: {
-    title: 'Nyati Equinox',
+    title: 'SR Equinox',
     subtitle: '2, 3 & 4 Bed Scenic Horizon Homes • Bavdhan, West Pune',
     image: 'assets/images/hero.jpg',
     status: 'Fast Possession',
@@ -54,7 +54,7 @@ const projectDatabase = {
     }
   },
   unitree: {
-    title: 'Nyati Unitree',
+    title: 'SR Unitree',
     subtitle: 'Grade-A Corporate & IT Business Park • Yerwada, Central Pune',
     image: 'assets/images/unitree.jpg',
     status: 'Ready Possession',
@@ -62,7 +62,7 @@ const projectDatabase = {
     carpet: '1,200 - 25,000 Sq. Ft.',
     price: 'Corporate Ready',
     rera: 'P52100000388',
-    overview: 'A gleaming architectural marvel on Pune-Ahmednagar road, Yerwada. Housing multinational giants and the corporate headquarters of Nyati Group. Features double-glazed curtain walls, LEED Gold compliance, 100% DG backup, and 3-level parking.',
+    overview: 'A gleaming architectural marvel on Pune-Ahmednagar road, Yerwada. Housing multinational giants and the corporate headquarters of SR Developer. Features double-glazed curtain walls, LEED Gold compliance, 100% DG backup, and 3-level parking.',
     floorplans: {
       '2bhk': { label: 'Executive Boutique Suite • 1,200 Sq. Ft.', rooms: "Reception, 2 Boardrooms, 18 Workstations" },
       '3bhk': { label: 'Corporate Floor Wing • 6,500 Sq. Ft.', rooms: "Executive Cabins, Town Hall, Server Room" },
@@ -70,7 +70,7 @@ const projectDatabase = {
     }
   },
   era: {
-    title: 'Nyati Era',
+    title: 'SR Era',
     subtitle: '2 & 3 Bed Futuristic Residences • Dhanori, East Pune',
     image: 'assets/images/luxury-interior.jpg',
     status: 'Under Construction',
@@ -86,7 +86,7 @@ const projectDatabase = {
     }
   },
   enthral: {
-    title: 'Nyati Enthral',
+    title: 'SR Enthral',
     subtitle: 'Next-Gen Corporate & Retail Suites • Kharadi IT Corridor',
     image: 'assets/images/unitree.jpg',
     status: 'New Launch',
@@ -106,8 +106,8 @@ const projectDatabase = {
 let currentModalProjectKey = 'emerald';
 let heroCurrentIndex = 0;
 let heroSliderTimer = null;
-let introTimer = null;
-let introCounterInterval = null;
+let introStep1Timer = null;
+let introSlideUpTimer = null;
 
 document.addEventListener('DOMContentLoaded', () => {
   initIntroAnimation();
@@ -115,59 +115,85 @@ document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
   initMegaMenu();
   initProjectsFilter();
+  initGalleryFilter();
   initMilestoneCounters();
   initNavScroll();
+  initScrollProgress();
 });
 
 // ==========================================================================
-// CINEMATIC 2-STEP INTRO (NYATI 2s -> 1s CHANGE -> BUILDER AND DEVELOPER 2s -> SLIDE UP)
+// CINEMATIC INTRO ANIMATION ON REFRESH & NAVIGATION
 // ==========================================================================
-let introStep1Timer = null;
-let introSlideUpTimer = null;
-
 function initIntroAnimation() {
   const curtain = document.getElementById('introCurtain');
   const step1 = document.getElementById('introStep1');
   const step2 = document.getElementById('introStep2');
-  if (!curtain || !step1 || !step2) return;
+  if (!curtain || !step1) return;
 
   document.body.style.overflow = 'hidden';
 
-  // 1. Immediately show Step 1: NYATI (shows for 2 sec)
+  // Check if navigating back to Home via "?from=subpage"
+  const urlParams = new URLSearchParams(window.location.search);
+  const isBackToHome = urlParams.get('from') === 'subpage';
+  const customPageTitle = curtain.getAttribute('data-intro-title');
+  const customPageSubtitle = curtain.getAttribute('data-intro-subtitle');
+
+  if (isBackToHome) {
+    // Show 2-second "BACK TO HOME PAGE" transition animation
+    step1.innerHTML = `<h1 class="intro-huge-title" style="letter-spacing: 0.16em;">BACK TO HOME PAGE</h1>`;
+    step1.classList.add('active');
+    if (step2) step2.style.display = 'none';
+
+    setTimeout(() => {
+      dismissIntroCurtain();
+    }, 2000);
+    return;
+  }
+
+  if (customPageTitle) {
+    // Subpage 2-second intro text animation
+    let titleHtml = `<h1 class="intro-huge-title" style="letter-spacing: 0.16em;">${customPageTitle}</h1>`;
+    if (customPageSubtitle) {
+      titleHtml += `<h2 class="intro-subtitle-title" style="font-size: 1.5rem; margin-top: 1rem; letter-spacing: 0.2em;">${customPageSubtitle}</h2>`;
+    }
+    step1.innerHTML = titleHtml;
+    step1.classList.add('active');
+    if (step2) step2.style.display = 'none';
+
+    // Slide up curtain upwards after 2 seconds
+    setTimeout(() => {
+      dismissIntroCurtain();
+    }, 2000);
+    return;
+  }
+
+  // 1. Immediately show Step 1: SR DEVELOPER
   setTimeout(() => {
     step1.classList.add('active');
-  }, 50);
+  }, 60);
 
-  // 2. At 2000ms (2 seconds): 1-second smooth text transition from NYATI to BUILDER AND DEVELOPER
+  // 2. Smooth cross-fade to Step 2: BUILDER AND DEVELOPER
   introStep1Timer = setTimeout(() => {
     step1.classList.remove('active');
     step1.classList.add('exit');
+    if (step2) step2.classList.add('active');
+  }, 1000);
 
-    // 1-sec cross-transition to BUILDER AND DEVELOPER
-    step2.classList.add('active');
-  }, 2000);
-
-  // 3. At 5000ms (after 1s transition + 2s of BUILDER AND DEVELOPER): page slides UPwards
+  // 3. Slide up curtain upwards after 2 seconds total
   introSlideUpTimer = setTimeout(() => {
     dismissIntroCurtain();
-  }, 5000);
-}
-
-function skipIntro() {
-  if (introStep1Timer) clearTimeout(introStep1Timer);
-  if (introSlideUpTimer) clearTimeout(introSlideUpTimer);
-  dismissIntroCurtain();
+  }, 2000);
 }
 
 function dismissIntroCurtain() {
   const curtain = document.getElementById('introCurtain');
   if (curtain) {
-    // Curtain slides UPWARDS
     curtain.classList.add('slide-up');
     document.body.style.overflow = '';
-    startHeroSliderTimer();
+    if (typeof startHeroSliderTimer === 'function') {
+      startHeroSliderTimer();
+    }
 
-    // After 1 second slide-up transition finishes, hide completely
     setTimeout(() => {
       curtain.classList.add('hidden');
     }, 1000);
@@ -185,7 +211,6 @@ function updateHeroSlide(index) {
   const slides = document.querySelectorAll('.hero-slide');
   const captionTag = document.getElementById('heroCaptionTag');
   const captionTitle = document.getElementById('heroCaptionTitle');
-  const counter = document.getElementById('heroSlideCounter');
 
   if (!slides || slides.length === 0) return;
 
@@ -208,11 +233,6 @@ function updateHeroSlide(index) {
     const title = activeSlide.getAttribute('data-title');
     if (captionTag && tag) captionTag.textContent = tag;
     if (captionTitle && title) captionTitle.textContent = title;
-    if (counter) {
-      const currentNum = String(heroCurrentIndex + 1).padStart(2, '0');
-      const totalNum = String(slides.length).padStart(2, '0');
-      counter.textContent = `${currentNum} / ${totalNum}`;
-    }
   }
 }
 
@@ -238,19 +258,25 @@ function restartHeroSliderTimer() {
   startHeroSliderTimer();
 }
 
-// Sticky Header State Controller
+// Sticky Header State Controller (Reveals ONLY when user scrolls down)
 function initStickyHeader() {
   const header = document.getElementById('mainHeader');
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
+  if (!header) return;
+
+  function handleScroll() {
+    if (window.scrollY > 50) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
-  }, { passive: true });
+  }
+
+  // Ensure header is hidden immediately on load
+  handleScroll();
+  window.addEventListener('scroll', handleScroll, { passive: true });
 }
 
-// Fullscreen Mega Menu with Image Hover Switching (Signature Nyati Interaction)
+// Fullscreen Mega Menu with Image Hover Switching (Signature SR Developer Interaction)
 function initMegaMenu() {
   const toggleBtn = document.getElementById('menuToggleBtn');
   const overlay = document.getElementById('megaMenuOverlay');
@@ -265,9 +291,7 @@ function initMegaMenu() {
       if (isOpen) {
         closeMegaMenu();
       } else {
-        overlay.classList.add('open');
-        toggleBtn.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        openMegaMenu();
       }
     });
   }
@@ -304,6 +328,14 @@ function initMegaMenu() {
   });
 }
 
+function openMegaMenu() {
+  const overlay = document.getElementById('megaMenuOverlay');
+  const toggleBtn = document.getElementById('menuToggleBtn');
+  if (overlay) overlay.classList.add('open');
+  if (toggleBtn) toggleBtn.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
 function closeMegaMenu() {
   const overlay = document.getElementById('megaMenuOverlay');
   const toggleBtn = document.getElementById('menuToggleBtn');
@@ -311,6 +343,9 @@ function closeMegaMenu() {
   if (toggleBtn) toggleBtn.classList.remove('active');
   document.body.style.overflow = '';
 }
+
+window.openMegaMenu = openMegaMenu;
+window.closeMegaMenu = closeMegaMenu;
 
 // Filter Tabs for Featured Projects
 function initProjectsFilter() {
@@ -513,9 +548,9 @@ function openScheduleModal(projectName) {
   }
 
   // Highlight the form
-  const formCard = document.querySelector('.inquiry-form-card');
+  const formCard = document.querySelector('.contact-form-card') || document.querySelector('.inquiry-form-card');
   if (formCard) {
-    formCard.style.outline = '2px solid var(--nyati-gold)';
+    formCard.style.outline = '2px solid var(--primary-blue)';
     setTimeout(() => {
       formCard.style.outline = 'none';
     }, 2000);
@@ -591,3 +626,44 @@ function initNavScroll() {
     });
   });
 }
+
+// Track Smooth Dynamic Scroll Progress
+function initScrollProgress() {
+  const progressBar = document.getElementById('scrollProgressBar');
+  if (!progressBar) return;
+
+  window.addEventListener('scroll', () => {
+    const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+    if (totalHeight > 0) {
+      const progress = (window.scrollY / totalHeight) * 100;
+      progressBar.style.width = `${progress}%`;
+    }
+  }, { passive: true });
+}
+
+// Media Gallery Filter Handler (Photos, Videos, Drone Views)
+function initGalleryFilter() {
+  const tabs = document.querySelectorAll('[data-gallery-filter]');
+  const items = document.querySelectorAll('.gallery-item');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const filterVal = tab.getAttribute('data-gallery-filter');
+      items.forEach(item => {
+        const itemType = item.getAttribute('data-type');
+        if (filterVal === 'all' || itemType === filterVal) {
+          item.style.display = 'block';
+          item.style.opacity = '0';
+          setTimeout(() => { item.style.opacity = '1'; }, 40);
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+}
+
+

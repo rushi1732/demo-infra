@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Enquiry Form, Headquarters Map &amp; WhatsApp | SR Developer</title>
+  <meta name="description" content="Connect with SR Developer corporate headquarters in Yerwada, Pune. Institutional enquiry form, direct WhatsApp concierge, and site visit scheduling.">
+  <link rel="canonical" href="https://srdeveloper.com/contact.html">
+
+  <!-- Google Fonts: Cinzel & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Dynamic Scroll Progress Indicator -->
+  <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+
+  <!-- 2-Second Sub-Page Intro Animation Curtain -->
+  <div class="intro-curtain" id="introCurtain" data-intro-title="CONTACT US" data-intro-subtitle="ENQUIRY FORM • MAP • WHATSAPP">
+    <div class="intro-container">
+      <div class="intro-text-step" id="introStep1"></div>
+    </div>
+  </div>
+
+  <!-- Transparent-to-Solid Sticky Header -->
+  <header class="main-header" id="mainHeader">
+    <div class="container header-inner">
+      <a href="index.html?from=subpage" class="brand-logo" aria-label="SR Developer Homepage">
+        <div class="logo-symbol">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2" />
+            <polyline points="2 17 12 22 22 17" />
+            <polyline points="2 12 12 17 22 12" />
+          </svg>
+        </div>
+        <div class="logo-text-block">
+          <span class="logo-brand-name">SR DEVELOPER</span>
+          <span class="logo-tagline">Creating Landmarks Since 1997</span>
+        </div>
+      </a>
+
+      <!-- 3-Line Hamburger Menu Toggle Button (Right Corner) -->
+      <div class="header-actions">
+        <button class="menu-toggle-btn" id="menuToggleBtn" aria-label="Toggle Navigation Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Fullscreen Interactive Mega Menu Overlay -->
+  <div class="mega-menu-overlay" id="megaMenuOverlay">
+    <button class="mega-menu-close-btn" onclick="closeMegaMenu()" aria-label="Close Menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+    </button>
+    <div class="mega-menu-left">
+      <div>
+        <p class="mega-menu-header-tag">SR Developer Conglomerate Navigation</p>
+        <ul class="mega-menu-links">
+          <li class="mega-menu-item" data-preview="assets/images/hero.jpg" data-caption-title="Home Page" data-caption-desc="Return to the executive homepage showcase.">
+            <a href="index.html?from=subpage">
+              <div class="menu-main-row">
+                <span class="menu-num">00</span>
+                <span class="menu-title">Home</span>
+              </div>
+              <span class="menu-subitems">Main Overview &amp; Interactive Showcase</span>
+            </a>
+          </li>
+          <li class="mega-menu-item" data-preview="assets/images/hero.jpg" data-caption-title="About SR Developer" data-caption-desc="Founded in 1997. Over 29 years of architectural distinction, ethical governance, and nation-building.">
+            <a href="about.html">
+              <div class="menu-main-row">
+                <span class="menu-num">01</span>
+                <span class="menu-title">About</span>
+              </div>
+              <span class="menu-subitems">History, Vision, Mission, Leadership</span>
+            </a>
+          </li>
+          <li class="mega-menu-item" data-preview="assets/images/unitree.jpg" data-caption-title="Our Core Business Verticals" data-caption-desc="End-to-end engineering excellence across high-rise residential construction, civil infrastructure EPC, and integrated master developments.">
+            <a href="services.html">
+              <div class="menu-main-row">
+                <span class="menu-num">02</span>
+                <span class="menu-title">Our Services</span>
+              </div>
+              <span class="menu-subitems">Construction, Infrastructure, Development</span>
+            </a>
+          </li>
+          <li class="mega-menu-item" data-preview="assets/images/emerald.jpg" data-caption-title="Prestigious Landmark Projects" data-caption-desc="Explore ultra-luxury gated residences, commercial IT business towers, and mixed-use urban landmarks.">
+            <a href="projects.html">
+              <div class="menu-main-row">
+                <span class="menu-num">03</span>
+                <span class="menu-title">Projects</span>
+              </div>
+              <span class="menu-subitems">Ongoing, Completed, Upcoming Projects</span>
+            </a>
+          </li>
+          <li class="mega-menu-item" data-preview="assets/images/esteban.jpg" data-caption-title="Project Visual Gallery" data-caption-desc="High-definition architectural photography, cinematic walkthrough videos, and aerial drone site perspectives.">
+            <a href="gallery.html">
+              <div class="menu-main-row">
+                <span class="menu-num">04</span>
+                <span class="menu-title">Project Gallery</span>
+              </div>
+              <span class="menu-subitems">Photos, Videos, Drone Views</span>
+            </a>
+          </li>
+          <li class="mega-menu-item" data-preview="assets/images/luxury-interior.jpg" data-caption-title="Certifications &amp; Accolades" data-caption-desc="Triple ISO quality compliance, CREDAI &amp; BAI awards, and over 10 million safe LTI-free work hours.">
+            <a href="certifications.html">
+              <div class="menu-main-row">
+                <span class="menu-num">05</span>
+                <span class="menu-title">Certifications</span>
+              </div>
+              <span class="menu-subitems">ISO, Awards, Safety Certificates</span>
+            </a>
+          </li>
+          <li class="mega-menu-item active" data-preview="assets/images/corinthians.jpg" data-caption-title="Contact &amp; Connect" data-caption-desc="Institutional enquiry desk, corporate office map in Yerwada, and direct WhatsApp concierge assistance.">
+            <a href="contact.html">
+              <div class="menu-main-row">
+                <span class="menu-num">06</span>
+                <span class="menu-title">Contact Us</span>
+              </div>
+              <span class="menu-subitems">Enquiry Form, Map, WhatsApp</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="mega-menu-footer">
+        <div>
+          <strong style="color: var(--dark-blue);">Headquarters:</strong> 6th Floor, SR Unitree, Yerwada, Pune - 411006
+        </div>
+        <div>
+          <a href="tel:+912066863333" style="color: var(--dark-blue); font-weight: 700;">+91 20 6686 3333</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="mega-menu-right">
+      <img src="assets/images/corinthians.jpg" alt="Preview Showcase" class="mega-preview-bg" id="megaPreviewImg">
+      <div class="mega-preview-overlay"></div>
+      <div class="mega-preview-caption">
+        <h4 id="megaCaptionTitle">Contact Us</h4>
+        <p id="megaCaptionDesc">Corporate Headquarters, Enquiry Desk &amp; WhatsApp Concierge.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Sub-Page Hero Banner with Blurred Background & Large Title -->
+  <section class="subpage-hero">
+    <div class="subpage-hero-bg" style="background-image: url('assets/images/corinthians.jpg');"></div>
+    <div class="subpage-hero-overlay"></div>
+    <div class="subpage-hero-content">
+      <span class="subpage-hero-tag">Executive Concierge</span>
+      <h1 class="subpage-hero-title">Contact Us</h1>
+      <p class="subpage-hero-desc">Institutional Enquiry Desk, Yerwada Corporate Headquarters Map, and Instant WhatsApp Concierge Access.</p>
+      <div class="subpage-scroll-cue">
+        <span>Scroll Down For Detailed Information</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Breadcrumb Navigation Bar -->
+  <nav class="breadcrumb-strip" style="background: var(--off-white); border-bottom: 1px solid var(--border-subtle); padding: 0.85rem 0;" aria-label="Breadcrumb">
+    <div class="container" style="display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; font-weight: 600; color: var(--dark-blue);">
+      <a href="index.html?from=subpage" style="color: var(--dark-blue); opacity: 0.8;">Home</a>
+      <span>/</span>
+      <span style="color: var(--dark-blue); font-weight: 700;">Contact Us</span>
+    </div>
+  </nav>
+
+  <!-- Contact Form & Info Grid -->
+  <section style="padding: 5rem 0; background: var(--pure-white);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 3.5rem;">
+        
+        <!-- Left: Enquiry Form -->
+        <div style="background: var(--off-white); padding: 3rem; border-radius: 6px; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+          <span class="section-tag" style="margin-bottom: 0.75rem;">Direct Enquiry</span>
+          <h2 style="font-family: var(--font-serif); font-size: 1.8rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 1rem;">Send Corporate Message</h2>
+          <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+            Please complete the details below. Our senior relationship manager will contact you within 2 business hours.
+          </p>
+
+          <form id="contactForm" onsubmit="handleFormSubmit(event)">
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Your Full Name *</label>
+              <input type="text" required placeholder="e.g. Rajesh Kumar" style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);">
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+              <div>
+                <label style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Phone Number *</label>
+                <input type="tel" required placeholder="+91 98220 00000" style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);">
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Email Address *</label>
+                <input type="email" required placeholder="name@domain.com" style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);">
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
+              <div>
+                <label style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Project Interest</label>
+                <select style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);">
+                  <option value="emerald">SR Emerald (Baner)</option>
+                  <option value="esteban">SR Esteban II (Undri)</option>
+                  <option value="unitree">SR Unitree (Yerwada)</option>
+                  <option value="equinox">SR Equinox (Bavdhan)</option>
+                  <option value="era">SR Era (Dhanori)</option>
+                  <option value="corinthians">The Corinthians Resort</option>
+                  <option value="other">General EPC / Land JV</option>
+                </select>
+              </div>
+              <div>
+                <label style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Budget Range</label>
+                <select style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);">
+                  <option>₹ 75 Lacs - ₹ 1.25 Cr</option>
+                  <option>₹ 1.25 Cr - ₹ 2.5 Cr</option>
+                  <option>₹ 2.5 Cr - ₹ 5 Cr+</option>
+                  <option>Commercial / Corporate</option>
+                </select>
+              </div>
+            </div>
+
+            <div style="margin-bottom: 1.5rem;">
+              <label style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Requirement Details</label>
+              <textarea rows="4" placeholder="Mention floor preferences, site visit request date, or commercial carpet requirements..." style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);"></textarea>
+            </div>
+
+            <button type="submit" class="btn-teaser-view" style="width: 100%; justify-content: center; cursor: pointer;">
+              Submit Corporate Enquiry
+            </button>
+            <div id="formSuccessMsg" style="display: none; margin-top: 1rem; padding: 1rem; background: #E8F5E9; color: #1B5E20; border-radius: 4px; font-weight: 600; text-align: center;">
+              Thank you! Your enquiry has been received. Our sales executive will call you shortly.
+            </div>
+          </form>
+        </div>
+
+        <!-- Right: Contact Directory & WhatsApp -->
+        <div style="display: flex; flex-direction: column; gap: 2rem;">
+          
+          <!-- WhatsApp Card -->
+          <div style="background: linear-gradient(135deg, #1F4E6B 0%, #15374C 100%); color: var(--pure-white); padding: 2.5rem; border-radius: 6px; box-shadow: var(--shadow-md);">
+            <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem;">
+              <div style="width: 48px; height: 48px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              </div>
+              <div>
+                <h3 style="font-family: var(--font-serif); font-size: 1.35rem; font-weight: 700; color: var(--pure-white);">Direct WhatsApp Concierge</h3>
+                <p style="font-size: 0.85rem; color: var(--soft-sky-blue);">Instant floor plans, pricing quotes &amp; site visit coordinates</p>
+              </div>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--light-sky-blue); line-height: 1.6; margin-bottom: 1.75rem;">
+              Connect directly with our senior site managers via WhatsApp for brochures, videos, and private chauffeur site inspection booking.
+            </p>
+            <a href="https://wa.me/919822000000?text=Hello%20SR%20Developer,%20I%20would%20like%20to%20enquire%20about%20your%20projects" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 0.75rem; background: #25D366; color: #FFFFFF; padding: 0.9rem 1.8rem; border-radius: 4px; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em;">
+              Chat on WhatsApp Now
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Address & Details Card -->
+          <div style="background: var(--off-white); padding: 2.5rem; border-radius: 6px; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-sm);">
+            <h3 style="font-family: var(--font-serif); font-size: 1.35rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 1.5rem;">Corporate Headquarters</h3>
+            
+            <div style="margin-bottom: 1.25rem;">
+              <span style="display: block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.12em; margin-bottom: 0.25rem;">Head Office Address</span>
+              <p style="color: var(--text-body); font-size: 0.95rem; line-height: 1.6;">
+                6th Floor, SR Unitree,<br>
+                Pune-Ahmednagar Road, Yerwada,<br>
+                Pune, Maharashtra - 411006
+              </p>
+            </div>
+
+            <div style="margin-bottom: 1.25rem;">
+              <span style="display: block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.12em; margin-bottom: 0.25rem;">Direct Phone &amp; Boardline</span>
+              <p style="color: var(--dark-blue); font-size: 0.95rem; font-weight: 700;">
+                +91 20 6686 3333 &bull; +91 98220 00000
+              </p>
+            </div>
+
+            <div style="margin-bottom: 1.25rem;">
+              <span style="display: block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.12em; margin-bottom: 0.25rem;">Official Inquiries</span>
+              <p style="color: var(--text-body); font-size: 0.95rem;">
+                corporate@srdeveloper.com &bull; sales@srdeveloper.com
+              </p>
+            </div>
+
+            <div>
+              <span style="display: block; font-size: 0.78rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.12em; margin-bottom: 0.25rem;">Operational Hours</span>
+              <p style="color: var(--text-body); font-size: 0.95rem;">
+                Monday – Saturday: 9:30 AM – 6:30 PM<br>
+                Site Experiential Centers: Open 7 Days a Week
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Location Map Container -->
+      <div style="margin-top: 4rem; background: var(--off-white); border-radius: 6px; padding: 2.5rem; border: 1.5px solid var(--border-subtle);">
+        <h3 style="font-family: var(--font-serif); font-size: 1.45rem; font-weight: 700; color: var(--dark-blue); margin-bottom: 1rem;">Corporate Location Map &bull; Yerwada Central Pune</h3>
+        <p style="color: var(--text-body); font-size: 0.95rem; margin-bottom: 1.5rem;">
+          Conveniently situated along the Pune-Ahmednagar national highway with swift transit connections:
+        </p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 1.5rem;">
+          <div style="background: var(--pure-white); padding: 1rem; border-radius: 4px; border: 1px solid var(--border-subtle);">
+            <strong style="color: var(--dark-blue); display: block;">Pune Int'l Airport:</strong>
+            <span style="color: var(--text-body); font-size: 0.9rem;">12 Minutes Drive (4.8 km)</span>
+          </div>
+          <div style="background: var(--pure-white); padding: 1rem; border-radius: 4px; border: 1px solid var(--border-subtle);">
+            <strong style="color: var(--dark-blue); display: block;">Pune Railway Station:</strong>
+            <span style="color: var(--text-body); font-size: 0.9rem;">10 Minutes Drive (3.5 km)</span>
+          </div>
+          <div style="background: var(--pure-white); padding: 1rem; border-radius: 4px; border: 1px solid var(--border-subtle);">
+            <strong style="color: var(--dark-blue); display: block;">Kharadi EON IT Park:</strong>
+            <span style="color: var(--text-body); font-size: 0.9rem;">15 Minutes Drive (6.2 km)</span>
+          </div>
+          <div style="background: var(--pure-white); padding: 1rem; border-radius: 4px; border: 1px solid var(--border-subtle);">
+            <strong style="color: var(--dark-blue); display: block;">Bund Garden Metro:</strong>
+            <span style="color: var(--text-body); font-size: 0.9rem;">5 Minutes Drive (1.8 km)</span>
+          </div>
+        </div>
+
+        <!-- Styled Map Frame -->
+        <div style="width: 100%; height: 350px; border-radius: 6px; overflow: hidden; border: 1.5px solid var(--border-subtle); position: relative;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3782.355325785086!2d73.88241477595562!3d18.558022682542617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c12217c46a6f%3A0xc34ba2fca25e24c2!2sYerawada%2C%20Pune%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="SR Developer Headquarters Location Map">
+          </iframe>
+        </div>
+      </div>
+
+      <!-- Action Row -->
+      <div class="teaser-action-row" style="margin-top: 4rem;">
+        <a href="index.html?from=subpage" class="btn-teaser-view">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m15 18-6-6 6-6"/></svg>
+          Back To Home Page
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Corporate Footer -->
+  <footer style="background: var(--dark-blue); color: var(--pure-white); padding: 4.5rem 0 2.5rem 0;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2.5rem; margin-bottom: 3.5rem;">
+        <div>
+          <h4 style="font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 1rem; color: var(--pure-white);">SR DEVELOPER</h4>
+          <p style="color: var(--light-sky-blue); font-size: 0.9rem; line-height: 1.7;">
+            Western India's premier infrastructure and luxury residential conglomerate since 1997. Over 40 million sq. ft. of executed landmarks.
+          </p>
+        </div>
+        <div>
+          <h5 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--soft-sky-blue); margin-bottom: 1rem;">Direct Navigation</h5>
+          <ul style="list-style: none; padding: 0; line-height: 2.2; font-size: 0.9rem;">
+            <li><a href="index.html?from=subpage" style="color: var(--pure-white);">Home</a></li>
+            <li><a href="about.html" style="color: var(--pure-white);">About Us</a></li>
+            <li><a href="services.html" style="color: var(--pure-white);">Our Services</a></li>
+            <li><a href="projects.html" style="color: var(--pure-white);">Landmark Projects</a></li>
+            <li><a href="gallery.html" style="color: var(--pure-white);">Project Gallery</a></li>
+            <li><a href="certifications.html" style="color: var(--pure-white);">Certifications</a></li>
+            <li><a href="contact.html" style="color: var(--pure-white); font-weight: 700;">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h5 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.15em; color: var(--soft-sky-blue); margin-bottom: 1rem;">Corporate Office</h5>
+          <p style="color: var(--light-sky-blue); font-size: 0.9rem; line-height: 1.7;">
+            6th Floor, SR Unitree,<br>
+            Pune-Ahmednagar Road, Yerwada,<br>
+            Pune, Maharashtra - 411006
+          </p>
+          <p style="margin-top: 1rem; color: var(--pure-white); font-weight: 700;">
+            Tel: +91 20 6686 3333
+          </p>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.15); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-size: 0.85rem; color: var(--light-sky-blue);">
+        <div>&copy; 1997-2026 SR Developer Conglomerate. All Rights Reserved.</div>
+        <div>MahaRERA Statutory Compliance &bull; Escrow Governed</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      document.getElementById('formSuccessMsg').style.display = 'block';
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
