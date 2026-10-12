@@ -138,32 +138,34 @@ function initIntroAnimation() {
   const customPageTitle = curtain.getAttribute('data-intro-title');
   const customPageSubtitle = curtain.getAttribute('data-intro-subtitle');
 
+  curtain.addEventListener('click', dismissIntroCurtain);
+  curtain.style.cursor = 'pointer';
+
   if (isBackToHome) {
-    // Show 2-second "BACK TO HOME PAGE" transition animation
-    step1.innerHTML = `<h1 class="intro-huge-title" style="letter-spacing: 0.16em;">BACK TO HOME PAGE</h1>`;
+    step1.innerHTML = `<h1 class="intro-huge-title" style="letter-spacing: 0.16em;">BACK TO HOME</h1>`;
     step1.classList.add('active');
     if (step2) step2.style.display = 'none';
 
     setTimeout(() => {
       dismissIntroCurtain();
-    }, 2000);
+    }, 1200);
     return;
   }
 
   if (customPageTitle) {
-    // Subpage 2-second intro text animation
-    let titleHtml = `<h1 class="intro-huge-title" style="letter-spacing: 0.16em;">${customPageTitle}</h1>`;
-    if (customPageSubtitle) {
-      titleHtml += `<h2 class="intro-subtitle-title" style="font-size: 1.5rem; margin-top: 1rem; letter-spacing: 0.2em;">${customPageSubtitle}</h2>`;
+    // Clean, elegant subpage intro
+    let titleHtml = `<h1 class="intro-huge-title">${customPageTitle}</h1>`;
+    if (customPageSubtitle && customPageSubtitle.trim() !== '') {
+      titleHtml += `<h2 class="intro-subtitle-title">${customPageSubtitle}</h2>`;
     }
     step1.innerHTML = titleHtml;
     step1.classList.add('active');
     if (step2) step2.style.display = 'none';
 
-    // Slide up curtain upwards after 2 seconds
+    // Slide up curtain smoothly after 1.2s
     setTimeout(() => {
       dismissIntroCurtain();
-    }, 2000);
+    }, 1200);
     return;
   }
 
@@ -459,18 +461,23 @@ function initMilestoneCounters() {
 
 function animateCount(element, target) {
   let start = 0;
-  const duration = 1600;
+  const duration = 1400;
   const stepTime = 25;
   const steps = duration / stepTime;
   const increment = target / steps;
 
+  const rawText = element.textContent.trim();
+  let suffix = '+';
+  if (rawText.includes('M+')) suffix = 'M+';
+  else if (rawText.includes('%')) suffix = '%';
+
   const timer = setInterval(() => {
     start += increment;
     if (start >= target) {
-      element.textContent = target >= 1000 ? target.toLocaleString() + '+' : target + (target > 5 ? '+' : '');
+      element.textContent = (target >= 1000 ? target.toLocaleString() : target) + suffix;
       clearInterval(timer);
     } else {
-      element.textContent = Math.floor(start) + '+';
+      element.textContent = Math.floor(start) + suffix;
     }
   }, stepTime);
 }

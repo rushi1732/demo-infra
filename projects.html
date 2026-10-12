@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -19,8 +19,8 @@
   <!-- Dynamic Scroll Progress Indicator -->
   <div class="scroll-progress-bar" id="scrollProgressBar"></div>
 
-  <!-- 2-Second Sub-Page Intro Animation Curtain -->
-  <div class="intro-curtain" id="introCurtain" data-intro-title="PROJECTS" data-intro-subtitle="ONGOING â€¢ COMPLETED â€¢ UPCOMING">
+  <!-- Sub-Page Intro Animation Curtain -->
+  <div class="intro-curtain" id="introCurtain" data-intro-title="PROJECTS">
     <div class="intro-container">
       <div class="intro-text-step" id="introStep1"></div>
     </div>
@@ -193,7 +193,7 @@
       </div>
 
       <!-- Project Cards Grid -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2.5rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2.5rem; max-width: 1360px; margin: 0 auto; justify-content: center;">
         
         <!-- Project 1: SR Emerald (Ongoing) -->
         <div class="project-grid-item project-card" data-category="ongoing" style="background: var(--off-white); border-radius: 6px; overflow: hidden; border: 1.5px solid var(--border-subtle); box-shadow: var(--shadow-sm); display: flex; flex-direction: column;">
@@ -453,7 +453,7 @@
             <button class="fp-tab-btn" onclick="switchFloorplan('3bhk')" style="padding: 0.4rem 1rem; border-radius: 4px; font-size: 0.82rem; font-weight: 700; background: var(--pure-white); color: var(--dark-blue); border: 1px solid var(--border-subtle); cursor: pointer;">3 BHK Residence</button>
             <button class="fp-tab-btn" onclick="switchFloorplan('penthouse')" style="padding: 0.4rem 1rem; border-radius: 4px; font-size: 0.82rem; font-weight: 700; background: var(--pure-white); color: var(--dark-blue); border: 1px solid var(--border-subtle); cursor: pointer;">Penthouse</button>
           </div>
-          <p id="floorplanLabel" style="font-size: 0.9rem; color: var(--dark-blue); font-weight: 600;">2 BHK Grand Suite â€¢ 840 Sq. Ft. Carpet Area</p>
+          <p id="floorplanLabel" style="font-size: 0.9rem; color: var(--dark-blue); font-weight: 600;">2 BHK Grand Suite &bull; 840 Sq. Ft. Carpet Area</p>
         </div>
 
         <div style="display: flex; gap: 1rem; margin-top: 1.5rem;">

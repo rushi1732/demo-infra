@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -19,8 +19,8 @@
   <!-- Dynamic Scroll Progress Indicator -->
   <div class="scroll-progress-bar" id="scrollProgressBar"></div>
 
-  <!-- 2-Second Sub-Page Intro Animation Curtain -->
-  <div class="intro-curtain" id="introCurtain" data-intro-title="PROJECT GALLERY" data-intro-subtitle="PHOTOS â€¢ VIDEOS â€¢ DRONE VIEWS">
+  <!-- Sub-Page Intro Animation Curtain -->
+  <div class="intro-curtain" id="introCurtain" data-intro-title="PROJECT GALLERY">
     <div class="intro-container">
       <div class="intro-text-step" id="introStep1"></div>
     </div>
@@ -193,13 +193,13 @@
       </div>
 
       <!-- Media Grid -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2rem;">
+      <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 2rem; max-width: 1360px; margin: 0 auto; justify-content: center;">
         
         <!-- Media 1: Emerald Tower (Photos) -->
         <div class="gallery-card" data-category="photos" style="position: relative; border-radius: 6px; overflow: hidden; height: 320px; box-shadow: var(--shadow-sm); cursor: pointer;" onclick="openLightbox('assets/images/emerald.jpg', 'SR Emerald High-Rise Elevation', 'Baner, West Pune')">
           <img src="assets/images/emerald.jpg" alt="SR Emerald Elevation" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(31, 78, 107, 0.95) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; color: var(--pure-white);">
-            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #FFFFFF; margin-bottom: 0.25rem;">Photos â€¢ Baner</span>
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #FFFFFF; margin-bottom: 0.25rem;">Photos &bull; Baner</span>
             <h4 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--pure-white);">SR Emerald High-Rise Elevation</h4>
           </div>
         </div>
@@ -208,7 +208,7 @@
         <div class="gallery-card" data-category="videos" style="position: relative; border-radius: 6px; overflow: hidden; height: 320px; box-shadow: var(--shadow-sm); cursor: pointer;" onclick="openLightbox('assets/images/esteban.jpg', 'SR Esteban Central Lagoon Walkthrough', 'Undri, South Pune')">
           <img src="assets/images/esteban.jpg" alt="SR Esteban Resort" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(31, 78, 107, 0.95) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; color: var(--pure-white);">
-            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #FFFFFF; margin-bottom: 0.25rem;">4K Video â€¢ Undri</span>
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #FFFFFF; margin-bottom: 0.25rem;">4K Video &bull; Undri</span>
             <h4 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--pure-white);">SR Esteban Central Lagoon Walkthrough</h4>
           </div>
         </div>
@@ -217,7 +217,7 @@
         <div class="gallery-card" data-category="drone" style="position: relative; border-radius: 6px; overflow: hidden; height: 320px; box-shadow: var(--shadow-sm); cursor: pointer;" onclick="openLightbox('assets/images/unitree.jpg', 'SR Unitree Aerial Drone Survey', 'Yerwada, Central Pune')">
           <img src="assets/images/unitree.jpg" alt="SR Unitree Aerial" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(31, 78, 107, 0.95) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; color: var(--pure-white);">
-            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #FFFFFF; margin-bottom: 0.25rem;">Drone Survey â€¢ Yerwada</span>
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #FFFFFF; margin-bottom: 0.25rem;">Drone Survey &bull; Yerwada</span>
             <h4 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--pure-white);">SR Unitree Aerial Drone Survey</h4>
           </div>
         </div>
@@ -226,7 +226,7 @@
         <div class="gallery-card" data-category="photos" style="position: relative; border-radius: 6px; overflow: hidden; height: 320px; box-shadow: var(--shadow-sm); cursor: pointer;" onclick="openLightbox('assets/images/luxury-interior.jpg', 'Model Residence Italian Marble Living', 'Bespoke Interiors')">
           <img src="assets/images/luxury-interior.jpg" alt="Luxury Living Room" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(31, 78, 107, 0.95) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; color: var(--pure-white);">
-            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #FFFFFF; margin-bottom: 0.25rem;">Photos â€¢ Interior Design</span>
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #FFFFFF; margin-bottom: 0.25rem;">Photos &bull; Interior Design</span>
             <h4 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--pure-white);">Model Residence Italian Marble Living</h4>
           </div>
         </div>
@@ -235,7 +235,7 @@
         <div class="gallery-card" data-category="videos" style="position: relative; border-radius: 6px; overflow: hidden; height: 320px; box-shadow: var(--shadow-sm); cursor: pointer;" onclick="openLightbox('assets/images/corinthians.jpg', 'Corinthians Resort Hospitality Tour', 'NIBM Undri')">
           <img src="assets/images/corinthians.jpg" alt="Corinthians Tour" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(31, 78, 107, 0.95) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; color: var(--pure-white);">
-            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #FFFFFF; margin-bottom: 0.25rem;">4K Video â€¢ Hospitality</span>
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #FFFFFF; margin-bottom: 0.25rem;">4K Video &bull; Hospitality</span>
             <h4 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--pure-white);">Corinthians Resort Hospitality Tour</h4>
           </div>
         </div>
@@ -244,7 +244,7 @@
         <div class="gallery-card" data-category="photos" style="position: relative; border-radius: 6px; overflow: hidden; height: 320px; box-shadow: var(--shadow-sm); cursor: pointer;" onclick="openLightbox('assets/images/hero.jpg', 'Skyline Master Architecture & EPC', 'Pune City')">
           <img src="assets/images/hero.jpg" alt="Skyline Architecture" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;">
           <div style="position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, rgba(31, 78, 107, 0.95) 100%); display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem; color: var(--pure-white);">
-            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #FFFFFF; margin-bottom: 0.25rem;">Photos â€¢ Architecture</span>
+            <span style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; color: #FFFFFF; margin-bottom: 0.25rem;">Photos &bull; Architecture</span>
             <h4 style="font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--pure-white);">Skyline Master Architecture &amp; EPC</h4>
           </div>
         </div>
