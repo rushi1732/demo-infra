@@ -167,22 +167,22 @@ function initIntroAnimation() {
     return;
   }
 
-  // 1. Immediately show Step 1: SR DEVELOPER
+  // 1. Immediately show Step 1: SR DEVELOPER for full 2 seconds
   setTimeout(() => {
     step1.classList.add('active');
   }, 60);
 
-  // 2. Smooth cross-fade to Step 2: BUILDER AND DEVELOPER
+  // 2. Smooth cross-fade to Step 2: BUILDERS AND DEVELOPERS after 2 seconds
   introStep1Timer = setTimeout(() => {
     step1.classList.remove('active');
     step1.classList.add('exit');
     if (step2) step2.classList.add('active');
-  }, 1000);
+  }, 2000);
 
-  // 3. Slide up curtain upwards after 2 seconds total
+  // 3. Slide up curtain upwards after 2 seconds of Step 2 (4000ms total)
   introSlideUpTimer = setTimeout(() => {
     dismissIntroCurtain();
-  }, 2000);
+  }, 4000);
 }
 
 function dismissIntroCurtain() {

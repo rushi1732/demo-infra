@@ -5,28 +5,28 @@
    ========================================================================== */
 
 :root {
-  /* Brand Corporate Palette (User Specified) */
+  /* Brand Corporate Palette (User Specified: White, Off White, Sky Blue, Dark Blue) */
   --pure-white: #FFFFFF;
   --off-white: #F8FCFF;
   --light-sky-blue: #D9F1FF;
   --soft-sky-blue: #BFE8FF;
-  --primary-blue: #1F4E6B;   /* Dark Blue across website as requested */
-  --accent-blue: #2F80A8;    /* Kept for subtle badges/borders */
-  --dark-blue: #1F4E6B;      /* Executive Dark Blue */
-  --light-gray-text: #1F4E6B; /* Rich dark blue contrast (WCAG AAA) */
+  --primary-blue: #0F2A3F;   /* Deep Executive Dark Blue (Rich Contrast) */
+  --accent-blue: #163B54;    /* Strong Dark Blue Accent */
+  --dark-blue: #0A1E2D;      /* Deepest High-Contrast Dark Blue */
+  --light-gray-text: #163B54; /* Crisp Dark Blue Contrast (Zero washed out text) */
 
-  /* Executive Contrast Tokens (Rich Depth, Zero Muddy/Obsidian Black) */
+  /* Executive Contrast Tokens */
   --bg-primary: var(--pure-white);
   --bg-secondary: var(--off-white);
   --bg-accent-light: var(--light-sky-blue);
   --bg-accent-soft: var(--soft-sky-blue);
   --bg-azure-soft: #EEF7FC;
 
-  --text-dark: #1F4E6B;
-  --text-primary: #1F4E6B;
-  --text-body: #1F4E6B;      /* Pure dark blue readability */
-  --text-subtle: #1F4E6B;    /* High contrast dark blue */
-  --text-muted: #1F4E6B;     /* Crisp dark blue */
+  --text-dark: #0A1E2D;
+  --text-primary: #0A1E2D;
+  --text-body: #0F2A3F;      /* Rich dark blue readability */
+  --text-subtle: #163B54;    /* High contrast dark blue */
+  --text-muted: #163B54;     /* Crisp dark blue */
   --text-white: var(--pure-white);
 
   --border-subtle: #D8ECF8;
@@ -296,13 +296,13 @@ input, select, textarea {
 .subpage-hero-tag {
   display: inline-block;
   font-size: 0.82rem;
-  font-weight: 700;
+  font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.22em;
-  color: var(--soft-sky-blue);
-  background: rgba(255, 255, 255, 0.15);
-  border: 1px solid rgba(191, 232, 255, 0.4);
-  padding: 0.4rem 1.2rem;
+  color: #FFFFFF;
+  background: rgba(10, 30, 45, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 0.45rem 1.3rem;
   border-radius: 4px;
   margin-bottom: 1.25rem;
   backdrop-filter: blur(8px);
@@ -321,7 +321,7 @@ input, select, textarea {
 
 .subpage-hero-desc {
   font-size: 1.12rem;
-  color: #F8FCFF;
+  color: #FFFFFF;
   max-width: 720px;
   margin: 0 auto 1.8rem auto;
   line-height: 1.7;
@@ -333,10 +333,10 @@ input, select, textarea {
   align-items: center;
   gap: 0.5rem;
   font-size: 0.78rem;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--soft-sky-blue);
+  color: #FFFFFF;
   animation: bounceCue 2s infinite ease-in-out;
 }
 
@@ -464,17 +464,18 @@ input, select, textarea {
   text-align: center;
   line-height: 1.15;
   color: var(--dark-blue);
-  text-shadow: 0 8px 30px rgba(31, 78, 107, 0.15);
+  text-shadow: 0 8px 30px rgba(10, 30, 45, 0.15);
 }
 
 .intro-subtitle-title {
   font-family: var(--font-serif);
-  font-size: clamp(2.2rem, 5vw, 4.2rem);
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  font-size: clamp(2.6rem, 6vw, 4.8rem);
+  font-weight: 800;
+  letter-spacing: 0.22em;
   text-align: center;
-  line-height: 1.2;
-  color: var(--primary-blue);
+  line-height: 1.15;
+  color: var(--dark-blue);
+  text-shadow: 0 8px 30px rgba(10, 30, 45, 0.15);
 }
 
 /* ==========================================================================
@@ -575,10 +576,10 @@ input, select, textarea {
   font-size: 0.65rem;
   text-transform: uppercase;
   letter-spacing: 0.22em;
-  color: var(--soft-sky-blue);
+  color: #FFFFFF;
   font-weight: 700;
   margin-top: 2px;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
   transition: color var(--transition-fast), text-shadow var(--transition-fast);
 }
 
@@ -826,7 +827,8 @@ input, select, textarea {
 
 .mega-preview-caption p {
   font-size: 0.95rem;
-  color: var(--light-sky-blue);
+  color: #FFFFFF;
+  opacity: 0.95;
   line-height: 1.6;
 }
 
@@ -894,11 +896,11 @@ input, select, textarea {
 .hero-caption-tag {
   font-family: var(--font-sans);
   font-size: clamp(0.95rem, 1.25vw, 1.15rem);
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--soft-sky-blue);
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85);
+  color: #FFFFFF;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.95);
   margin: 0;
   padding: 0;
   display: block;
@@ -956,7 +958,7 @@ input, select, textarea {
   font-family: var(--font-serif);
   font-size: clamp(2.3rem, 3.5vw, 3.4rem);
   font-weight: 800;
-  color: var(--soft-sky-blue);
+  color: #FFFFFF;
   line-height: 1;
   margin-bottom: 0.5rem;
 }
@@ -965,7 +967,8 @@ input, select, textarea {
   font-size: 0.84rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: var(--light-sky-blue);
+  color: #FFFFFF;
+  opacity: 0.95;
   font-weight: 700;
 }
 
@@ -1507,8 +1510,9 @@ input, select, textarea {
 
 .gallery-caption p {
   font-size: 0.85rem;
-  color: var(--soft-sky-blue);
-  font-weight: 500;
+  color: #FFFFFF;
+  opacity: 0.95;
+  font-weight: 600;
 }
 
 /* ==========================================================================
@@ -1525,13 +1529,14 @@ input, select, textarea {
 }
 
 .section-certifications .section-tag {
-  background: rgba(217, 241, 255, 0.15);
-  color: var(--light-sky-blue);
-  border-color: rgba(217, 241, 255, 0.35);
+  background: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.4);
+  font-weight: 800;
 }
 
 .section-certifications .section-tag::before {
-  background: var(--light-sky-blue);
+  background: #FFFFFF;
 }
 
 .section-certifications .section-heading {
@@ -1576,14 +1581,14 @@ input, select, textarea {
 .cert-badge-icon {
   width: 66px;
   height: 66px;
-  background: rgba(217, 241, 255, 0.16);
-  color: var(--soft-sky-blue);
+  background: rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 1.5rem;
-  border: 2px solid rgba(217, 241, 255, 0.35);
+  border: 2px solid rgba(255, 255, 255, 0.4);
 }
 
 .cert-title {
@@ -1596,7 +1601,8 @@ input, select, textarea {
 
 .cert-desc {
   font-size: 0.92rem;
-  color: #cce7f8;
+  color: #FFFFFF;
+  opacity: 0.95;
   line-height: 1.7;
 }
 
@@ -1835,12 +1841,14 @@ input, select, textarea {
 
 .footer-links-list a {
   font-size: 0.92rem;
-  color: #d9f1ff;
+  color: #FFFFFF;
+  opacity: 0.92;
   transition: all var(--transition-fast);
 }
 
 .footer-links-list a:hover {
   color: var(--pure-white);
+  opacity: 1;
   transform: translateX(4px);
   display: inline-block;
 }
@@ -1873,7 +1881,7 @@ input, select, textarea {
 .footer-rera-note {
   font-size: 0.8rem;
   line-height: 1.7;
-  color: #a8cfdf;
+  color: rgba(255, 255, 255, 0.9);
   padding: 2.2rem 0;
   border-bottom: 1px solid rgba(217, 241, 255, 0.15);
 }
@@ -1884,17 +1892,18 @@ input, select, textarea {
   align-items: center;
   padding-top: 2rem;
   font-size: 0.88rem;
-  color: #a8cfdf;
+  color: rgba(255, 255, 255, 0.9);
   flex-wrap: wrap;
   gap: 1rem;
 }
 
 .footer-bottom-row a {
-  color: #d9f1ff;
+  color: #FFFFFF;
 }
 
 .footer-bottom-row a:hover {
   color: var(--pure-white);
+  text-decoration: underline;
 }
 
 /* ==========================================================================
