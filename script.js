@@ -100,6 +100,38 @@ const projectDatabase = {
       '3bhk': { label: 'Tech Accelerator Suite • 2,400 Sq. Ft.', rooms: "Open Plan Co-working Layout, Conference Hub" },
       'penthouse': { label: 'Penthouse Office Suite • 8,000 Sq. Ft.', rooms: "Private Executive Terrace, Direct Elevator" }
     }
+  },
+  corinthians: {
+    title: 'The Corinthians Resort & Club',
+    subtitle: '5-Star Egyptian Luxury Sanctuary & Club • NIBM Undri, South Pune',
+    image: 'assets/images/corinthians.jpg',
+    status: 'Operational 5-Star Hub',
+    bhk: 'Suites & Villas',
+    carpet: '25 Landscaped Acres',
+    price: 'Bespoke Hospitality',
+    rera: 'MahaRERA Approved',
+    overview: 'Pune’s crowning Egyptian-themed luxury resort sanctuary spread across 25 landscaped acres in Undri. Features opulent private villas, Olympic swimming pool, grand ballroom, luxury spa, fine dining restro-lounges, and world-class leisure club memberships.',
+    floorplans: {
+      '2bhk': { label: 'Imperial Deluxe Suite • 650 Sq. Ft.', rooms: 'Private Balcony, Jacuzzi Bathroom, Garden Vista' },
+      '3bhk': { label: 'Presidential Royal Villa • 2,200 Sq. Ft.', rooms: 'Private Plunge Pool, 2 Master Suites, Butler Dining' },
+      'penthouse': { label: 'Signature Grand Pavilion • 5,000 Sq. Ft.', rooms: 'Banquet Lounge, Private Lawn, VIP Suites' }
+    }
+  },
+  boulevard: {
+    title: 'SR Boulevard',
+    subtitle: '3 & 4 Bed Grand Skyline Enclave • Hinjawadi Phase 1, West Pune',
+    image: 'assets/images/emerald.jpg',
+    status: 'Upcoming Launch',
+    bhk: '3 & 4 BHK',
+    carpet: '1,120 - 1,780 Sq. Ft.',
+    price: '₹ 1.25 Cr*',
+    rera: 'Planning Approval',
+    overview: 'An elite residential high-rise planned exclusively for tech innovators and leaders in the heart of Hinjawadi Phase 1. Features panoramic sky terraces, electric vehicle superchargers, infinity edge pool, and smart home automation.',
+    floorplans: {
+      '2bhk': { label: '3 BHK Executive Horizon • 1,120 Sq. Ft.', rooms: "Living (20'x14'), 3 Bedrooms, Double Sundeck" },
+      '3bhk': { label: '4 BHK Imperial Suite • 1,480 Sq. Ft.', rooms: "Grand Living Room, 4 Master Suites, Utility Deck" },
+      'penthouse': { label: 'Sky Villa Penthouse • 1,780 Sq. Ft.', rooms: "Private Sky Garden, Triple-Height Foyer" }
+    }
   }
 };
 
@@ -326,6 +358,7 @@ function initMegaMenu() {
     if (e.key === 'Escape') {
       closeMegaMenu();
       closeProjectModal();
+      if (typeof closeLightbox === 'function') closeLightbox();
     }
   });
 }
@@ -375,14 +408,13 @@ function initProjectsFilter() {
 
 function applyFilterToCards(filterVal) {
   const cards = document.querySelectorAll('.project-card');
+  const target = (filterVal || 'all').toLowerCase();
   cards.forEach(card => {
-    const cardCat = card.getAttribute('data-category') || '';
-    if (filterVal === 'all' || cardCat.includes(filterVal)) {
+    const cardCat = (card.getAttribute('data-category') || '').toLowerCase();
+    const isMatch = target === 'all' || cardCat === target || cardCat.includes(target);
+    if (isMatch) {
       card.style.display = 'flex';
-      card.style.opacity = '0';
-      setTimeout(() => {
-        card.style.opacity = '1';
-      }, 50);
+      card.style.opacity = '1';
     } else {
       card.style.display = 'none';
     }
@@ -650,23 +682,25 @@ function initScrollProgress() {
 
 // Media Gallery Filter Handler (Photos, Videos, Drone Views)
 function initGalleryFilter() {
-  const tabs = document.querySelectorAll('[data-gallery-filter]');
-  const items = document.querySelectorAll('.gallery-item');
+  const tabs = document.querySelectorAll('.gallery-tab-btn, [data-gallery-filter]');
+  const cards = document.querySelectorAll('.gallery-card, .gallery-item');
+
+  if (!tabs.length || !cards.length) return;
 
   tabs.forEach(tab => {
     tab.addEventListener('click', () => {
       tabs.forEach(t => t.classList.remove('active'));
       tab.classList.add('active');
 
-      const filterVal = tab.getAttribute('data-gallery-filter');
-      items.forEach(item => {
-        const itemType = item.getAttribute('data-type');
-        if (filterVal === 'all' || itemType === filterVal) {
-          item.style.display = 'block';
-          item.style.opacity = '0';
-          setTimeout(() => { item.style.opacity = '1'; }, 40);
+      const filterVal = (tab.getAttribute('data-filter') || tab.getAttribute('data-gallery-filter') || 'all').toLowerCase();
+      cards.forEach(card => {
+        const cardCat = (card.getAttribute('data-category') || card.getAttribute('data-type') || '').toLowerCase();
+        const isMatch = filterVal === 'all' || cardCat === filterVal || cardCat.includes(filterVal);
+        if (isMatch) {
+          card.style.display = '';
+          card.style.opacity = '1';
         } else {
-          item.style.display = 'none';
+          card.style.display = 'none';
         }
       });
     });

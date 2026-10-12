@@ -1262,21 +1262,62 @@ input, select, textarea {
   border: 1px solid var(--soft-sky-blue);
 }
 
-.filter-tab-btn {
+.filter-tab-btn,
+.gallery-tab-btn {
   padding: 0.65rem 1.4rem;
-  font-size: 0.82rem;
-  font-weight: 800;
+  font-size: 0.85rem;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--dark-blue);
+  background: var(--off-white);
+  border: 1.5px solid var(--border-subtle);
   border-radius: 4px;
+  cursor: pointer;
   transition: all var(--transition-fast);
+  user-select: none;
 }
 
-.filter-tab-btn.active, .filter-tab-btn:hover {
-  background: var(--primary-blue);
-  color: var(--pure-white);
-  box-shadow: var(--shadow-sm);
+.filter-tab-btn:hover,
+.gallery-tab-btn:hover {
+  border-color: var(--gold-primary);
+  background: #FFF9ED;
+  color: var(--dark-blue);
+}
+
+.filter-tab-btn.active,
+.gallery-tab-btn.active {
+  background: var(--dark-blue) !important;
+  color: #FFF9ED !important;
+  border-color: var(--dark-blue) !important;
+  box-shadow: 0 4px 14px rgba(40, 40, 40, 0.22);
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(40, 40, 40, 0.82);
+  border: 1.5px solid rgba(244, 231, 203, 0.55);
+  color: #FFF9ED;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.45);
+  padding: 0;
+  z-index: 100001;
+}
+
+.lightbox-close-btn:hover {
+  background: var(--dark-blue);
+  border-color: var(--gold-primary);
+  color: var(--gold-primary);
+  transform: rotate(90deg) scale(1.08);
 }
 
 .projects-grid {

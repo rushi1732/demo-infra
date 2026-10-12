@@ -185,10 +185,10 @@
 
         <!-- Filter Tabs -->
         <div class="gallery-filter-bar" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-          <button class="gallery-tab-btn active" data-filter="all" style="padding: 0.65rem 1.4rem; border-radius: 4px; font-size: 0.85rem; font-weight: 700; border: 1.5px solid var(--dark-blue); background: var(--dark-blue); color: var(--pure-white);">All (6)</button>
-          <button class="gallery-tab-btn" data-filter="photos" style="padding: 0.65rem 1.4rem; border-radius: 4px; font-size: 0.85rem; font-weight: 700; border: 1.5px solid var(--border-subtle); background: var(--off-white); color: var(--dark-blue);">Photos (3)</button>
-          <button class="gallery-tab-btn" data-filter="videos" style="padding: 0.65rem 1.4rem; border-radius: 4px; font-size: 0.85rem; font-weight: 700; border: 1.5px solid var(--border-subtle); background: var(--off-white); color: var(--dark-blue);">Videos (2)</button>
-          <button class="gallery-tab-btn" data-filter="drone" style="padding: 0.65rem 1.4rem; border-radius: 4px; font-size: 0.85rem; font-weight: 700; border: 1.5px solid var(--border-subtle); background: var(--off-white); color: var(--dark-blue);">Drone Views (1)</button>
+          <button class="gallery-tab-btn active" data-filter="all">All (6)</button>
+          <button class="gallery-tab-btn" data-filter="photos">Photos (3)</button>
+          <button class="gallery-tab-btn" data-filter="videos">Videos (2)</button>
+          <button class="gallery-tab-btn" data-filter="drone">Drone Views (1)</button>
         </div>
       </div>
 
@@ -266,14 +266,17 @@
   </section>
 
   <!-- High-Resolution Lightbox Modal -->
-  <div class="lightbox-modal" id="lightboxModal" style="display: none; position: fixed; inset: 0; z-index: 100000; background: rgba(31, 78, 107, 0.96); backdrop-filter: blur(12px); justify-content: center; align-items: center; padding: 2rem;">
-    <button onclick="closeLightbox()" style="position: absolute; top: 2rem; right: 2rem; color: var(--pure-white); font-size: 2rem; width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border-radius: 50%; background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); cursor: pointer;">
-      &times;
+  <div class="lightbox-modal" id="lightboxModal" onclick="if(event.target === this) closeLightbox()" style="display: none; position: fixed; inset: 0; z-index: 100000; background: rgba(30, 30, 30, 0.94); backdrop-filter: blur(14px); justify-content: center; align-items: center; padding: 2rem;">
+    <button onclick="closeLightbox()" aria-label="Close Lightbox" class="lightbox-close-btn">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: auto;">
+        <line x1="18" y1="6" x2="6" y2="18"></line>
+        <line x1="6" y1="6" x2="18" y2="18"></line>
+      </svg>
     </button>
     <div style="max-width: 950px; width: 100%; text-align: center;">
-      <img src="" id="lightboxImg" alt="Enlarged Media" style="max-height: 75vh; width: auto; max-width: 100%; border-radius: 6px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5); margin: 0 auto;">
-      <h3 id="lightboxTitle" style="font-family: var(--font-serif); font-size: 1.5rem; color: var(--pure-white); margin-top: 1.25rem;">Title</h3>
-      <p id="lightboxDesc" style="color: #FFFFFF; font-size: 0.95rem;">Location</p>
+      <img src="" id="lightboxImg" alt="Enlarged Media" style="max-height: 75vh; width: auto; max-width: 100%; border-radius: 6px; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); margin: 0 auto; display: block;">
+      <h3 id="lightboxTitle" style="font-family: var(--font-serif); font-size: 1.5rem; color: #FFF9ED; margin-top: 1.25rem;">Title</h3>
+      <p id="lightboxDesc" style="color: #F4E7CB; font-size: 0.95rem;">Location</p>
     </div>
   </div>
 
