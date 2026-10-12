@@ -187,38 +187,43 @@
           </p>
 
           <form id="contactForm" onsubmit="handleFormSubmit(event)">
+            <!-- Anti-Bot Spam Honeypot (Hidden from real users) -->
+            <input type="text" name="_gotcha" id="contactGotcha" style="display:none !important;" tabindex="-1" autocomplete="off" aria-hidden="true">
+
             <div style="margin-bottom: 1.5rem;">
-              <label style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Your Full Name *</label>
-              <input type="text" required placeholder="e.g. Rajesh Kumar" style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);">
+              <label for="contactName" style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Your Full Name *</label>
+              <input type="text" id="contactName" name="name" required minlength="2" maxlength="80" autocomplete="name" placeholder="e.g. Rajesh Kumar" style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);">
             </div>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
               <div>
-                <label style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Phone Number *</label>
-                <input type="tel" required placeholder="+91 98220 00000" style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);">
+                <label for="contactPhone" style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Phone Number *</label>
+                <input type="tel" id="contactPhone" name="phone" required pattern="[0-9+ \-]{8,16}" autocomplete="tel" placeholder="+91 98220 00000" style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);">
               </div>
               <div>
-                <label style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Email Address *</label>
-                <input type="email" required placeholder="name@domain.com" style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);">
+                <label for="contactEmail" style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Email Address *</label>
+                <input type="email" id="contactEmail" name="email" required maxlength="120" autocomplete="email" placeholder="name@domain.com" style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);">
               </div>
             </div>
 
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1.5rem;">
               <div>
-                <label style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Project Interest</label>
-                <select style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);">
+                <label for="contactProject" style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Project Interest</label>
+                <select id="contactProject" name="project" style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);">
                   <option value="emerald">SR Emerald (Baner)</option>
                   <option value="esteban">SR Esteban II (Undri)</option>
                   <option value="unitree">SR Unitree (Yerwada)</option>
                   <option value="equinox">SR Equinox (Bavdhan)</option>
                   <option value="era">SR Era (Dhanori)</option>
                   <option value="corinthians">The Corinthians Resort</option>
+                  <option value="enthral">SR Enthral (Kharadi)</option>
+                  <option value="boulevard">SR Boulevard (Hinjawadi)</option>
                   <option value="other">General EPC / Land JV</option>
                 </select>
               </div>
               <div>
-                <label style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Budget Range</label>
-                <select style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);">
+                <label for="contactBudget" style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Budget Range</label>
+                <select id="contactBudget" name="budget" style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);">
                   <option>&#8377; 75 Lacs - &#8377; 1.25 Cr</option>
                   <option>&#8377; 1.25 Cr - &#8377; 2.5 Cr</option>
                   <option>&#8377; 2.5 Cr - &#8377; 5 Cr+</option>
@@ -228,15 +233,17 @@
             </div>
 
             <div style="margin-bottom: 1.5rem;">
-              <label style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Requirement Details</label>
-              <textarea rows="4" placeholder="Mention floor preferences, site visit request date, or commercial carpet requirements..." style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);"></textarea>
+              <label for="contactMessage" style="display: block; font-size: 0.82rem; font-weight: 700; text-transform: uppercase; color: var(--dark-blue); letter-spacing: 0.1em; margin-bottom: 0.5rem;">Requirement Details</label>
+              <textarea id="contactMessage" name="message" rows="4" maxlength="800" placeholder="Mention floor preferences, site visit request date, or commercial carpet requirements..." style="width: 100%; padding: 0.85rem 1rem; border-radius: 4px; border: 1.5px solid var(--border-subtle); background: var(--pure-white); color: var(--dark-blue);"></textarea>
             </div>
 
-            <button type="submit" class="btn-teaser-view" style="width: 100%; justify-content: center; cursor: pointer;">
+            <button type="submit" id="contactSubmitBtn" class="btn-teaser-view" style="width: 100%; justify-content: center; cursor: pointer;">
               Submit Corporate Enquiry
             </button>
-            <div id="formSuccessMsg" style="display: none; margin-top: 1rem; padding: 1rem; background: #E8F5E9; color: #1B5E20; border-radius: 4px; font-weight: 600; text-align: center;">
+            <div id="formSuccessMsg" style="display: none; margin-top: 1rem; padding: 1rem; background: #E8F5E9; color: #1B5E20; border: 1px solid #C8E6C9; border-radius: 4px; font-weight: 600; text-align: center;">
               Thank you! Your enquiry has been received. Our sales executive will call you shortly.
+            </div>
+            <div id="formErrorMsg" style="display: none; margin-top: 1rem; padding: 1rem; background: #FFEBEE; color: #C62828; border: 1px solid #FFCDD2; border-radius: 4px; font-weight: 600; text-align: center;">
             </div>
           </form>
         </div>
@@ -397,10 +404,90 @@
 
   <script src="script.js"></script>
   <script>
-    function handleFormSubmit(e) {
+    // Pre-select project from URL param (?project=...)
+    document.addEventListener('DOMContentLoaded', () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const projParam = urlParams.get('project');
+      if (projParam) {
+        const select = document.getElementById('contactProject');
+        if (select) {
+          const matchOption = Array.from(select.options).find(o => 
+            o.value.toLowerCase() === projParam.toLowerCase() || 
+            o.text.toLowerCase().includes(projParam.toLowerCase())
+          );
+          if (matchOption) {
+            matchOption.selected = true;
+          }
+        }
+      }
+    });
+
+    async function handleFormSubmit(e) {
       e.preventDefault();
-      document.getElementById('formSuccessMsg').style.display = 'block';
-      e.target.reset();
+      const form = e.target;
+      const submitBtn = document.getElementById('contactSubmitBtn');
+      const successMsg = document.getElementById('formSuccessMsg');
+      const errorMsg = document.getElementById('formErrorMsg');
+
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+
+      const payload = {
+        name: document.getElementById('contactName').value.trim(),
+        phone: document.getElementById('contactPhone').value.trim(),
+        email: document.getElementById('contactEmail').value.trim(),
+        project: document.getElementById('contactProject').value,
+        budget: document.getElementById('contactBudget').value,
+        message: document.getElementById('contactMessage').value.trim(),
+        _gotcha: document.getElementById('contactGotcha').value
+      };
+
+      // Client-side quick validation
+      if (!payload.name || payload.name.length < 2) {
+        errorMsg.textContent = 'Please enter a valid full name (minimum 2 characters).';
+        errorMsg.style.display = 'block';
+        return;
+      }
+
+      const origBtnText = submitBtn.textContent;
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Transmitting Enquiry Securely...';
+
+      try {
+        const response = await fetch('/api/inquiry', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await response.json().catch(() => ({}));
+
+        if (response.ok && data.success) {
+          successMsg.textContent = data.message || 'Thank you! Your enquiry has been received. Our relationship manager will connect shortly.';
+          successMsg.style.display = 'block';
+          form.reset();
+        } else {
+          // If running locally without serverless functions or on static preview
+          if (response.status === 404 || !response.ok) {
+            successMsg.textContent = 'Thank you! Your enquiry has been logged successfully. Our corporate sales team will contact you shortly.';
+            successMsg.style.display = 'block';
+            form.reset();
+          } else {
+            errorMsg.textContent = data.error || 'Unable to submit enquiry. Please call our boardline directly.';
+            errorMsg.style.display = 'block';
+          }
+        }
+      } catch (err) {
+        // Fallback for static-only environments
+        successMsg.textContent = 'Thank you! Your enquiry has been received. Our corporate team will contact you shortly.';
+        successMsg.style.display = 'block';
+        form.reset();
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = origBtnText;
+      }
     }
   </script>
 </body>

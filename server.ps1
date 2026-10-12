@@ -23,9 +23,10 @@ try {
                         $rawPath = 'index.html'
                     }
                     
-                    $filePath = Join-Path $PSScriptRoot $rawPath
+                    $filePath = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot $rawPath))
+                    $rootPath = [System.IO.Path]::GetFullPath($PSScriptRoot)
                     
-                    if (Test-Path $filePath -PathType Leaf) {
+                    if ($filePath.StartsWith($rootPath) -and (Test-Path $filePath -PathType Leaf)) {
                         $bytes = [System.IO.File]::ReadAllBytes($filePath)
                         $ext = [System.IO.Path]::GetExtension($filePath).ToLower()
                         
@@ -40,7 +41,7 @@ try {
                             default { 'application/octet-stream' }
                         }
                         
-                        $header = "HTTP/1.1 200 OK`r`nContent-Type: $mime`r`nContent-Length: $($bytes.Length)`r`nCache-Control: no-cache, no-store, must-revalidate`r`nConnection: close`r`n`r`n"
+                        $header = "HTTP/1.1 200 OK`r`nContent-Type: $mime`r`nContent-Length: $($bytes.Length)`r`nX-Content-Type-Options: nosniff`r`nX-Frame-Options: DENY`r`nCache-Control: no-cache, no-store, must-revalidate`r`nConnection: close`r`n`r`n"
                         $headerBytes = [System.Text.Encoding]::ASCII.GetBytes($header)
                         $stream.Write($headerBytes, 0, $headerBytes.Length)
                         $stream.Write($bytes, 0, $bytes.Length)

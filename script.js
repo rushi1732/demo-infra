@@ -534,12 +534,15 @@ function openProjectModal(projectKey) {
   // Set default floor plan tab
   switchFloorplan('2bhk');
 
-  // Bind site visit button
+  // Bind site visit button to direct contact page with project preselected
   const visitBtn = document.getElementById('modalVisitBtn');
-  visitBtn.onclick = () => {
-    closeProjectModal();
-    openScheduleModal(data.title);
-  };
+  if (visitBtn) {
+    visitBtn.onclick = (e) => {
+      e.preventDefault();
+      closeProjectModal();
+      window.location.href = `contact.html?project=${encodeURIComponent(projectKey)}`;
+    };
+  }
 
   const backdrop = document.getElementById('projectModalBackdrop');
   backdrop.classList.add('open');
