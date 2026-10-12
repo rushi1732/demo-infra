@@ -2104,7 +2104,10 @@ input, select, textarea {
   color: var(--primary-blue);
 }
 
-/* Responsive Media Queries */
+/* ==========================================================================
+   COMPREHENSIVE RESPONSIVE SYSTEM (DESKTOP, TABLET & MOBILE PERFECTION)
+   ========================================================================== */
+
 @media (max-width: 1200px) {
   .services-grid,
   .projects-grid,
@@ -2141,27 +2144,421 @@ input, select, textarea {
   .projects-grid,
   .gallery-grid {
     grid-template-columns: 1fr;
-    max-width: 520px;
+    max-width: 540px;
   }
   .modal-specs-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
+/* Tablet & Mobile Devices (<= 768px) */
 @media (max-width: 768px) {
+  .container {
+    padding-left: 1.25rem !important;
+    padding-right: 1.25rem !important;
+  }
+
+  /* Compact Section Paddings for smooth scrolling */
+  .section-about,
+  .section-services,
+  .section-projects,
+  .section-gallery,
+  .section-certifications,
+  .section-contact {
+    padding: 3.5rem 0;
+  }
+
+  .section-heading {
+    font-size: clamp(1.6rem, 5.5vw, 2.1rem);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-subtext {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+
+  .section-tag {
+    font-size: 0.72rem;
+    padding: 0.35rem 0.8rem;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.75rem;
+  }
+
+  .teaser-action-row {
+    margin-top: 2.2rem;
+  }
+
+  /* Full-width thumb-friendly action buttons */
+  .btn-teaser-view,
+  .btn-primary-blue {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.9rem 1.4rem;
+    font-size: 0.82rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* Mobile Sticky Header */
+  .main-header {
+    padding: 0.75rem 0;
+  }
+
+  .main-header.scrolled {
+    padding: 0.65rem 0;
+  }
+
+  .logo-symbol {
+    width: 38px;
+    height: 38px;
+    border-radius: 5px;
+  }
+
+  .logo-symbol svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .brand-logo {
+    gap: 0.65rem;
+  }
+
+  .logo-brand-name {
+    font-size: 1.15rem;
+    letter-spacing: 0.08em;
+  }
+
+  .logo-tagline {
+    font-size: 0.58rem;
+    letter-spacing: 0.14em;
+  }
+
+  .menu-toggle-btn {
+    width: 42px;
+    height: 42px;
+    gap: 5px;
+  }
+
+  .menu-toggle-btn span {
+    width: 20px;
+    height: 2px;
+  }
+
+  /* Mobile Hero Banner */
+  .hero-section {
+    height: 80vh;
+    min-height: 480px;
+    max-height: 620px;
+  }
+
   .hero-slide-caption {
-    left: 1.2rem;
-    right: 1.2rem;
+    left: 1.25rem;
+    right: 1.25rem;
     bottom: 2rem;
     padding: 0;
   }
-  .milestones-grid {
-    grid-template-columns: 1fr 1fr;
+
+  .hero-caption-tag {
+    font-size: 0.72rem;
+    letter-spacing: 0.14em;
   }
+
+  .hero-caption-title {
+    font-size: clamp(1.35rem, 5.5vw, 1.85rem);
+    line-height: 1.25;
+  }
+
+  /* Mobile Milestones Strip */
+  .milestones-strip {
+    padding: 1.35rem 0;
+  }
+
+  .milestones-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem 0.8rem;
+  }
+
+  .milestones-grid .milestone-item:last-child {
+    grid-column: span 2;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .milestone-item {
+    padding: 0 0.4rem;
+  }
+
+  .milestone-item:not(:last-child)::after {
+    display: none !important;
+  }
+
+  .milestone-number {
+    font-size: 1.5rem;
+    margin-bottom: 0.15rem;
+  }
+
+  .milestone-label {
+    font-size: 0.68rem;
+    line-height: 1.3;
+  }
+
+  /* Mobile About Section */
+  .about-editorial-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-image-card img {
+    height: 280px;
+  }
+
+  .about-badge-legacy {
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.7rem;
+    padding: 0.35rem 0.75rem;
+  }
+
+  .about-floating-stat {
+    position: static;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1.2rem;
+    border-radius: 6px;
+  }
+
+  .about-floating-stat .stat-num {
+    font-size: 1.8rem;
+  }
+
+  /* Mobile Cards */
+  .project-visual {
+    height: 220px;
+  }
+
+  .project-card-body {
+    padding: 1.4rem;
+  }
+
+  .project-title {
+    font-size: 1.35rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .service-image {
+    height: 200px;
+  }
+
+  .service-content {
+    padding: 1.4rem;
+  }
+
+  .service-title {
+    font-size: 1.3rem;
+  }
+
+  .gallery-item {
+    height: 240px;
+  }
+
+  .gallery-caption h4 {
+    font-size: 1.15rem;
+  }
+
+  .gallery-caption p {
+    font-size: 0.78rem;
+  }
+
+  /* Mobile Certifications */
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 1.4rem;
+  }
+
+  .cert-card {
+    padding: 2rem 1.4rem;
+  }
+
+  .cert-badge-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 1.2rem;
+  }
+
+  .cert-badge-icon svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .cert-title {
+    font-size: 1.25rem;
+  }
+
+  .cert-desc {
+    font-size: 0.88rem;
+    line-height: 1.6;
+  }
+
+  /* Mobile Forms & Footer */
   .form-grid-2 {
     grid-template-columns: 1fr;
   }
+
   .footer-top-grid {
     grid-template-columns: 1fr;
+    gap: 2.2rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .site-footer {
+    padding: 4rem 0 2rem;
+  }
+
+  .footer-bottom-row {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  /* Subpages & Modals */
+  .subpage-hero {
+    min-height: 320px;
+    height: 42vh;
+  }
+
+  .subpage-hero-title {
+    font-size: clamp(1.75rem, 6.5vw, 2.3rem);
+  }
+
+  .subpage-hero-desc {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+  }
+
+  .subpage-scroll-cue {
+    display: none;
+  }
+
+  .projects-filter-bar {
+    justify-content: flex-start;
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.5rem;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .projects-filter-bar button {
+    flex-shrink: 0;
+    padding: 0.55rem 1rem !important;
+    font-size: 0.78rem !important;
+  }
+
+  /* Modal Mobile Optimization */
+  .modal-backdrop {
+    padding: 0.75rem;
+  }
+
+  .project-modal-container {
+    max-height: 94vh;
+    border-radius: 8px;
+  }
+
+  .modal-header-hero {
+    height: 190px;
+  }
+
+  .modal-header-overlay {
+    padding: 1.2rem;
+  }
+
+  .modal-header-overlay h3 {
+    font-size: 1.35rem;
+  }
+
+  .modal-close-btn {
+    top: 1rem;
+    right: 1rem;
+    width: 36px;
+    height: 36px;
+  }
+
+  .modal-body-content {
+    padding: 1.4rem 1.15rem;
+  }
+
+  .modal-specs-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .modal-spec-item {
+    padding: 0.85rem;
+  }
+
+  .modal-spec-item .value {
+    font-size: 1rem;
+  }
+}
+
+/* Compact Mobile Devices (<= 480px, e.g. iPhone SE, Galaxy, 360px) */
+@media (max-width: 480px) {
+  .container {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .logo-brand-name {
+    font-size: 1.05rem;
+  }
+
+  .logo-tagline {
+    display: none;
+  }
+
+  .about-floating-stat {
+    padding: 1rem;
+  }
+
+  .about-pillars-grid {
+    grid-template-columns: 1fr !important;
+    gap: 0.65rem !important;
+  }
+
+  .milestones-grid {
+    gap: 0.9rem 0.5rem;
+  }
+
+  .milestone-number {
+    font-size: 1.38rem;
+  }
+
+  .milestone-label {
+    font-size: 0.64rem;
+  }
+
+  .mega-menu-left {
+    padding: 5rem 1.25rem 2.5rem;
+  }
+
+  .mega-menu-item .menu-title {
+    font-size: 1.25rem;
+  }
+
+  .mega-menu-item .menu-subitems {
+    font-size: 0.76rem;
+  }
+
+  .cert-card {
+    padding: 1.6rem 1rem;
+  }
+
+  .project-card-body {
+    padding: 1.2rem;
   }
 }
