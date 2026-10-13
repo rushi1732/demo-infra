@@ -4,3 +4,4 @@
 - [x] Phase 2: Design System & Core Modern Stack Setup (Cinzel + Plus Jakarta Sans, architectural bronze/obsidian palette, bespoke SVG icons)
 - [x] Phase 3: Components & Content Implementation (Fullscreen Mega Menu with hover previews, Hero Search Matrix, Milestones Counter, Editorial Who We Are, Projects filter tabs, Interactive Floorplan Modal, 5 Pillars, The Corinthians spotlight, Site Visit Scheduler)
 - [x] Phase 4: Local Assets, Packaging, Browser Launch & Verification (Directly opened in default browser via `index.html`)
+- [x] Phase 5: Luxury Brand Typography Upgrade (Cormorant Garamond 500-600 headings + Manrope 400-700 body/UI, CSS clamp responsive scales, refined line-heights, letter spacing, font-display swap, and all 7 subpages updated)
